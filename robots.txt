@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /schedule/
-Disallow: /weekly/
+Allow: /
+
+Sitemap: https://bluemtnpilates.com/sitemap.xml
