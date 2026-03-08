@@ -149,19 +149,98 @@ body.home-page { background: var(--surface); }
 }
 
 /* =========================================================
+   SHARED PAGE HERO
+   ========================================================= */
+
+.page-hero {
+  border-bottom: 1px solid var(--line);
+}
+
+.page-hero--warm {
+  background: var(--bg);
+}
+
+.page-hero__inner {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.page-hero__logo {
+  width: 96px;
+  height: 96px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.45);
+}
+
+.page-hero__content {
+  min-width: 0;
+}
+
+.page-hero__eyebrow {
+  margin: 0 0 8px 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.page-hero__title {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.page-hero__subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (min-width: 860px) {
+  .page-hero__inner {
+    grid-template-columns: 120px 1fr;
+    gap: 28px;
+  }
+
+  .page-hero__logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+  }
+
+  .page-hero__title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero__logo {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+/* =========================================================
    SCHEDULE PAGE (Protected)
    ========================================================= */
 
 body.schedule-page { background: var(--bg); }
 
-body.schedule-page h1,
-body.schedule-page h2 {
+body.schedule-page main h1,
+body.schedule-page main h2 {
   font-size: revert;
   font-weight: revert;
   margin: revert;
 }
 
-body.schedule-page h2 { margin-top: 40px; }
+body.schedule-page main h2 { margin-top: 40px; }
 
 body.schedule-page iframe.schedule {
   width: 100%;
@@ -175,6 +254,21 @@ body.schedule-page iframe.schedule {
 
 /* Weekly pages */
 body.weekly-page { background: var(--surface); }
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plain-list__item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.plain-list__item:first-child {
+  border-top: 1px solid var(--line);
+}
 
 /* ===== HERO as background image (HOME PAGE ONLY) ===== */
 body.home-page .home-hero{
