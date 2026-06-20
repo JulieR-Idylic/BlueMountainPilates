@@ -270,6 +270,10 @@ body.weekly-page { background: var(--surface); }
   border-top: 1px solid var(--line);
 }
 
+.message-content {
+  margin-left: 3em;
+}
+
 /* ===== HERO as background image (HOME PAGE ONLY) ===== */
 body.home-page .home-hero{
   position: relative;
