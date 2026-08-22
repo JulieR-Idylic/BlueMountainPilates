@@ -1,0 +1,53 @@
+name: Test OneDrive Download
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-download:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download workbook from OneDrive
+        run: |
+          curl -L \
+            --fail \
+            --show-error \
+            --output Studio_schedule2026.xlsx \
+            "${{ secrets.ONEDRIVE_SCHEDULE_URL }}&download=1"
+
+      - name: Show downloaded file information
+        run: |
+          echo "Downloaded file:"
+          ls -lh Studio_schedule2026.xlsx
+          echo
+          echo "Detected file type:"
+          file Studio_schedule2026.xlsx
+
+      - name: Verify workbook is a valid XLSX
+        run: |
+          python - <<'PY'
+          import zipfile
+          import sys
+
+          filename = "Studio_schedule2026.xlsx"
+
+          if not zipfile.is_zipfile(filename):
+              print("FAIL: Downloaded file is not a valid XLSX/ZIP file.")
+              sys.exit(1)
+
+          with zipfile.ZipFile(filename) as z:
+              names = z.namelist()
+
+              required = [
+                  "[Content_Types].xml",
+                  "xl/workbook.xml"
+              ]
+
+              for item in required:
+                  if item not in names:
+                      print(f"FAIL: Missing expected XLSX component: {item}")
+                      sys.exit(1)
+
+          print("SUCCESS: OneDrive returned a valid Excel XLSX workbook.")
+          PY
