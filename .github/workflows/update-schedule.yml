@@ -1,0 +1,85 @@
+name: Test Microsoft Graph Workbook Download
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-graph-download:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Microsoft Graph access token
+        shell: bash
+        run: |
+          RESPONSE=$(curl -sS -X POST \
+            "https://login.microsoftonline.com/consumers/oauth2/v2.0/token" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            --data-urlencode "client_id=${{ secrets.MS_GRAPH_CLIENT_ID }}" \
+            --data-urlencode "grant_type=refresh_token" \
+            --data-urlencode "refresh_token=${{ secrets.MS_GRAPH_REFRESH_TOKEN }}" \
+            --data-urlencode "scope=Files.Read User.Read offline_access")
+
+          ACCESS_TOKEN=$(echo "$RESPONSE" | python3 -c "
+          import sys, json
+          data=json.load(sys.stdin)
+          token=data.get('access_token')
+          if not token:
+              print('ERROR:', data.get('error'))
+              print('DESCRIPTION:', data.get('error_description'))
+              sys.exit(1)
+          print(token)
+          ")
+
+          echo "::add-mask::$ACCESS_TOKEN"
+          echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> "$GITHUB_ENV"
+
+      - name: Download exact schedule workbook
+        shell: bash
+        run: |
+          HTTP_STATUS=$(curl -sS -L \
+            -H "Authorization: Bearer $ACCESS_TOKEN" \
+            -o Studio_schedule2026.xlsx \
+            -w "%{http_code}" \
+            "https://graph.microsoft.com/v1.0/me/drive/items/${{ secrets.ONEDRIVE_SCHEDULE_ITEM_ID }}/content")
+
+          echo "HTTP status: $HTTP_STATUS"
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "ERROR: Workbook download failed."
+            exit 1
+          fi
+
+          echo "Downloaded file:"
+          ls -lh Studio_schedule2026.xlsx
+
+          echo "Detected file type:"
+          file Studio_schedule2026.xlsx
+
+          python3 - <<'PY'
+          import zipfile
+
+          filename = 'Studio_schedule2026.xlsx'
+
+          if not zipfile.is_zipfile(filename):
+              raise SystemExit(
+                  'ERROR: Downloaded file is not a valid XLSX/ZIP container.'
+              )
+
+          with zipfile.ZipFile(filename) as z:
+              names = set(z.namelist())
+
+          required = {
+              '[Content_Types].xml',
+              'xl/workbook.xml'
+          }
+
+          missing = required - names
+
+          if missing:
+              raise SystemExit(
+                  'ERROR: XLSX structure is incomplete: ' +
+                  ', '.join(sorted(missing))
+              )
+
+          print('SUCCESS: GitHub downloaded the exact schedule workbook as a valid XLSX.')
+          PY
