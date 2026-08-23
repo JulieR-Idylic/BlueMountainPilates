@@ -1,4 +1,4 @@
-name: Test Microsoft Graph Workbook Download
+name: Update Live Schedule
 
 on:
   workflow_dispatch:
