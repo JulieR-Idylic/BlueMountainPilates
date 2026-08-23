@@ -1,10 +1,10 @@
-name: Test Microsoft Graph Auth
+name: Test Microsoft Graph Workbook Download
 
 on:
   workflow_dispatch:
 
 jobs:
-  test-graph-auth:
+  test-graph-download:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,21 +33,87 @@ jobs:
           echo "::add-mask::$ACCESS_TOKEN"
           echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> "$GITHUB_ENV"
 
-      - name: Test Microsoft Graph
+      - name: Find schedule workbook
         shell: bash
         run: |
-          RESPONSE=$(curl -sS \
+          curl -sS \
             -H "Authorization: Bearer $ACCESS_TOKEN" \
-            "https://graph.microsoft.com/v1.0/me")
+            "https://graph.microsoft.com/v1.0/me/drive/root/search(q='Studio_schedule2026.xlsx')" \
+            -o /tmp/search.json
 
-          echo "$RESPONSE" | python3 -c "
-          import sys, json
-          data=json.load(sys.stdin)
-          if 'displayName' not in data:
-              print('ERROR: Graph did not return a valid user profile.')
-              print(data)
-              sys.exit(1)
+          ITEM_ID=$(python3 - <<'PY'
+          import json
 
-          print('SUCCESS: GitHub authenticated to Microsoft Graph.')
-          print('Display name:', data['displayName'])
-          "
+          with open('/tmp/search.json', 'r') as f:
+              data = json.load(f)
+
+          items = data.get('value', [])
+
+          if not items:
+              raise SystemExit('ERROR: Studio_schedule2026.xlsx was not found.')
+
+          exact = [item for item in items
+                   if item.get('name') == 'Studio_schedule2026.xlsx']
+
+          if not exact:
+              raise SystemExit('ERROR: No exact filename match was found.')
+
+          print(exact[0]['id'])
+          PY
+          )
+
+          echo "::add-mask::$ITEM_ID"
+          echo "ITEM_ID=$ITEM_ID" >> "$GITHUB_ENV"
+
+          echo "SUCCESS: Schedule workbook located."
+
+      - name: Download schedule workbook
+        shell: bash
+        run: |
+          HTTP_STATUS=$(curl -sS -L \
+            -H "Authorization: Bearer $ACCESS_TOKEN" \
+            -o Studio_schedule2026.xlsx \
+            -w "%{http_code}" \
+            "https://graph.microsoft.com/v1.0/me/drive/items/$ITEM_ID/content")
+
+          echo "HTTP status: $HTTP_STATUS"
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "ERROR: Workbook download failed."
+            exit 1
+          fi
+
+          echo "Downloaded file:"
+          ls -lh Studio_schedule2026.xlsx
+
+          echo "Detected file type:"
+          file Studio_schedule2026.xlsx
+
+          python3 - <<'PY'
+          import zipfile
+
+          filename = 'Studio_schedule2026.xlsx'
+
+          if not zipfile.is_zipfile(filename):
+              raise SystemExit(
+                  'ERROR: Downloaded file is not a valid XLSX/ZIP container.'
+              )
+
+          with zipfile.ZipFile(filename) as z:
+              names = set(z.namelist())
+
+          required = {
+              '[Content_Types].xml',
+              'xl/workbook.xml'
+          }
+
+          missing = required - names
+
+          if missing:
+              raise SystemExit(
+                  'ERROR: XLSX structure is incomplete: ' +
+                  ', '.join(sorted(missing))
+              )
+
+          print('SUCCESS: GitHub downloaded a valid XLSX workbook.')
+          PY
