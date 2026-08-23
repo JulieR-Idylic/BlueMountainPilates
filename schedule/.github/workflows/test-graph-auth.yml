@@ -1,0 +1,53 @@
+name: Test Microsoft Graph Auth
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-graph-auth:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Microsoft Graph access token
+        shell: bash
+        run: |
+          RESPONSE=$(curl -sS -X POST \
+            "https://login.microsoftonline.com/consumers/oauth2/v2.0/token" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            --data-urlencode "client_id=${{ secrets.MS_GRAPH_CLIENT_ID }}" \
+            --data-urlencode "grant_type=refresh_token" \
+            --data-urlencode "refresh_token=${{ secrets.MS_GRAPH_REFRESH_TOKEN }}" \
+            --data-urlencode "scope=Files.Read User.Read offline_access")
+
+          ACCESS_TOKEN=$(echo "$RESPONSE" | python3 -c "
+          import sys, json
+          data=json.load(sys.stdin)
+          token=data.get('access_token')
+          if not token:
+              print('ERROR:', data.get('error'))
+              print('DESCRIPTION:', data.get('error_description'))
+              sys.exit(1)
+          print(token)
+          ")
+
+          echo "::add-mask::$ACCESS_TOKEN"
+          echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> "$GITHUB_ENV"
+
+      - name: Test Microsoft Graph
+        shell: bash
+        run: |
+          RESPONSE=$(curl -sS \
+            -H "Authorization: Bearer $ACCESS_TOKEN" \
+            "https://graph.microsoft.com/v1.0/me")
+
+          echo "$RESPONSE" | python3 -c "
+          import sys, json
+          data=json.load(sys.stdin)
+          if 'displayName' not in data:
+              print('ERROR: Graph did not return a valid user profile.')
+              print(data)
+              sys.exit(1)
+
+          print('SUCCESS: GitHub authenticated to Microsoft Graph.')
+          print('Display name:', data['displayName'])
+          "
