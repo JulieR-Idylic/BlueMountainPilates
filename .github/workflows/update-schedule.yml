@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-graph-download:
+  update-schedule:
     runs-on: ubuntu-latest
 
     steps:
@@ -81,5 +81,8 @@ jobs:
                   ', '.join(sorted(missing))
               )
 
-          print('SUCCESS: GitHub downloaded the exact schedule workbook as a valid XLSX.')
+          print(
+              'SUCCESS: GitHub downloaded the exact schedule workbook '
+              'as a valid XLSX.'
+          )
           PY
