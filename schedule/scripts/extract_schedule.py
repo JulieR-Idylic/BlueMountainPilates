@@ -28,14 +28,13 @@ EXPECTED_FONT_SIZES = {
     "time": 13,
     "client": 13,
     "open": 13,
-    "instructor": 13,
+    "instructor": 14,
     "unavailable": 13,
     "no-class": 13,
     "class-canceled": 13,
     "no-classes-block": 13,
     "mat": 13,
 }
-
 
 class ScheduleAnomaly(Exception):
     """
@@ -468,12 +467,15 @@ def validate_cell_fill(
 
 def validate_font(cell, role):
     """
-    Our renderer intentionally supports bold vs regular
-    and the established 13/14 point schedule convention.
+    Validate only meaningful visible font conventions.
 
-    Italic or unexpected font sizing is treated as a
-    new formatting case requiring review.
+    Blank column-header cells are ignored because their
+    font size has no visual effect.
+
+    The renderer supports bold vs regular and the studio's
+    established 13/14 point schedule conventions.
     """
+
     if cell.font.italic:
         raise ScheduleAnomaly(
             "UNSUPPORTED_ITALIC",
@@ -483,6 +485,12 @@ def validate_font(cell, role):
                 f"{cell.coordinate}."
             ),
         )
+
+    if (
+        role == "column-header"
+        and cell.value in (None, "")
+    ):
+        return
 
     expected_size = EXPECTED_FONT_SIZES.get(role)
 
@@ -501,7 +509,6 @@ def validate_font(cell, role):
                 f"{expected_size}pt."
             ),
         )
-
 
 def validate_merge(
     cell,
