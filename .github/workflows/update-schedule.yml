@@ -3,6 +3,9 @@ name: Update Live Schedule
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-schedule:
     runs-on: ubuntu-latest
@@ -71,36 +74,36 @@ jobs:
           python3 - <<'PY'
           import zipfile
 
-          filename = 'Studio_schedule2026.xlsx'
+          filename = "Studio_schedule2026.xlsx"
 
           if not zipfile.is_zipfile(filename):
               raise SystemExit(
-                  'ERROR: Downloaded file is not a valid XLSX/ZIP container.'
+                  "ERROR: Downloaded file is not a valid XLSX/ZIP container."
               )
 
           with zipfile.ZipFile(filename) as z:
               names = set(z.namelist())
 
           required = {
-              '[Content_Types].xml',
-              'xl/workbook.xml'
+              "[Content_Types].xml",
+              "xl/workbook.xml"
           }
 
           missing = required - names
 
           if missing:
               raise SystemExit(
-                  'ERROR: XLSX structure is incomplete: ' +
-                  ', '.join(sorted(missing))
+                  "ERROR: XLSX structure is incomplete: "
+                  + ", ".join(sorted(missing))
               )
 
           print(
-              'SUCCESS: GitHub downloaded the exact schedule workbook '
-              'as a valid XLSX.'
+              "SUCCESS: GitHub downloaded the exact schedule workbook "
+              "as a valid XLSX."
           )
           PY
 
-      - name: Resolve web schedule ranges
+      - name: Generate public schedule JSON
         run: |
           python schedule/scripts/extract_schedule.py Studio_schedule2026.xlsx
 
@@ -147,9 +150,22 @@ jobs:
               )
           PY
 
-      - name: Upload schedule JSON for testing
-        uses: actions/upload-artifact@v4
-        with:
-          name: schedule-json
-          path: schedule/data/schedule.json
-          retention-days: 1
+      - name: Commit updated schedule JSON
+        shell: bash
+        run: |
+          if git diff --quiet -- schedule/data/schedule.json; then
+            echo "SUCCESS: Public schedule has not changed."
+            echo "No repository update is necessary."
+            exit 0
+          fi
+
+          echo "Public schedule changed."
+
+          git config user.name "Blue Mountain Pilates Schedule Bot"
+          git config user.email "actions@github.com"
+
+          git add schedule/data/schedule.json
+          git commit -m "Update live schedule"
+          git push
+
+          echo "SUCCESS: Updated schedule.json was committed to the repository."
