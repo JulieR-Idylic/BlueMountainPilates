@@ -8,6 +8,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openpyxl
+
       - name: Get Microsoft Graph access token
         shell: bash
         run: |
@@ -86,3 +99,7 @@ jobs:
               'as a valid XLSX.'
           )
           PY
+
+      - name: Resolve web schedule ranges
+        run: |
+          python schedule/scripts/extract_schedule.py Studio_schedule2026.xlsx
