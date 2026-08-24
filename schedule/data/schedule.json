@@ -1727,11 +1727,6 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
               "text": "Kathy R",
               "style": "client"
             },
@@ -1742,6 +1737,11 @@
             {
               "text": "Lu A",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Amy H",
@@ -2238,5 +2238,6 @@
         }
       ]
     }
-  ]
+  ],
+  "sourceLastModified": "2026-08-24T22:25:11Z"
 }
