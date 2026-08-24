@@ -37,19 +37,114 @@ jobs:
 
           ACCESS_TOKEN=$(echo "$RESPONSE" | python3 -c "
           import sys, json
-          data=json.load(sys.stdin)
-          token=data.get('access_token')
+          data = json.load(sys.stdin)
+          token = data.get('access_token')
+
           if not token:
               print('ERROR:', data.get('error'))
               print('DESCRIPTION:', data.get('error_description'))
               sys.exit(1)
+
           print(token)
           ")
 
           echo "::add-mask::$ACCESS_TOKEN"
           echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> "$GITHUB_ENV"
 
+      - name: Check OneDrive workbook modified time
+        id: source_check
+        shell: bash
+        run: |
+          HTTP_STATUS=$(curl -sS \
+            -H "Authorization: Bearer $ACCESS_TOKEN" \
+            -o item-metadata.json \
+            -w "%{http_code}" \
+            "https://graph.microsoft.com/v1.0/me/drive/items/${{ secrets.ONEDRIVE_SCHEDULE_ITEM_ID }}?\$select=id,name,lastModifiedDateTime")
+
+          echo "Metadata HTTP status: $HTTP_STATUS"
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "ERROR: Unable to retrieve workbook metadata."
+            cat item-metadata.json
+            exit 1
+          fi
+
+          SOURCE_LAST_MODIFIED=$(python3 - <<'PY'
+          import json
+
+          with open(
+              "item-metadata.json",
+              "r",
+              encoding="utf-8",
+          ) as file:
+              data = json.load(file)
+
+          value = data.get("lastModifiedDateTime")
+
+          if not value:
+              raise SystemExit(
+                  "ERROR: Graph did not return lastModifiedDateTime."
+              )
+
+          print(value)
+          PY
+          )
+
+          STORED_LAST_MODIFIED=$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("schedule/data/schedule.json")
+
+          if not path.exists() or path.stat().st_size == 0:
+              print("")
+              raise SystemExit(0)
+
+          try:
+              with path.open(
+                  "r",
+                  encoding="utf-8",
+              ) as file:
+                  data = json.load(file)
+          except (json.JSONDecodeError, OSError):
+              print("")
+              raise SystemExit(0)
+
+          print(
+              data.get(
+                  "sourceLastModified",
+                  ""
+              )
+          )
+          PY
+          )
+
+          echo "OneDrive last modified: $SOURCE_LAST_MODIFIED"
+
+          if [ -n "$STORED_LAST_MODIFIED" ]; then
+            echo "Last processed:         $STORED_LAST_MODIFIED"
+          else
+            echo "Last processed:         not yet recorded"
+          fi
+
+          echo "source_last_modified=$SOURCE_LAST_MODIFIED" >> "$GITHUB_OUTPUT"
+
+          if [ "$SOURCE_LAST_MODIFIED" = "$STORED_LAST_MODIFIED" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+
+            echo
+            echo "SUCCESS: Workbook has not changed since the last processed version."
+            echo "No download or extraction is necessary."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+
+            echo
+            echo "Workbook has changed since the last processed version."
+            echo "Continuing to download and extract the public schedule."
+          fi
+
       - name: Download exact schedule workbook
+        if: steps.source_check.outputs.changed == 'true'
         shell: bash
         run: |
           HTTP_STATUS=$(curl -sS -L \
@@ -86,7 +181,7 @@ jobs:
 
           required = {
               "[Content_Types].xml",
-              "xl/workbook.xml"
+              "xl/workbook.xml",
           }
 
           missing = required - names
@@ -104,10 +199,55 @@ jobs:
           PY
 
       - name: Generate public schedule JSON
+        if: steps.source_check.outputs.changed == 'true'
         run: |
           python schedule/scripts/extract_schedule.py Studio_schedule2026.xlsx
 
+      - name: Add source modified time to schedule JSON
+        if: steps.source_check.outputs.changed == 'true'
+        env:
+          SOURCE_LAST_MODIFIED: ${{ steps.source_check.outputs.source_last_modified }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path(
+              "schedule/data/schedule.json"
+          )
+
+          with path.open(
+              "r",
+              encoding="utf-8",
+          ) as file:
+              data = json.load(file)
+
+          data["sourceLastModified"] = (
+              os.environ["SOURCE_LAST_MODIFIED"]
+          )
+
+          with path.open(
+              "w",
+              encoding="utf-8",
+          ) as file:
+              json.dump(
+                  data,
+                  file,
+                  indent=2,
+                  ensure_ascii=False,
+              )
+
+              file.write("\n")
+
+          print(
+              "Recorded sourceLastModified:",
+              data["sourceLastModified"],
+          )
+          PY
+
       - name: Inspect generated schedule JSON
+        if: steps.source_check.outputs.changed == 'true'
         run: |
           echo "Generated JSON size:"
           ls -lh schedule/data/schedule.json
@@ -115,7 +255,7 @@ jobs:
           echo
           echo "Schedule summary:"
 
-          python - <<'PY'
+          python3 - <<'PY'
           import json
 
           with open(
@@ -128,6 +268,11 @@ jobs:
           print(
               "Schema version:",
               data["schemaVersion"],
+          )
+
+          print(
+              "Source last modified:",
+              data["sourceLastModified"],
           )
 
           print(
@@ -150,22 +295,109 @@ jobs:
               )
           PY
 
-      - name: Commit updated schedule JSON
+      - name: Determine whether public schedule changed
+        if: steps.source_check.outputs.changed == 'true'
+        id: schedule_check
         shell: bash
         run: |
-          if git diff --quiet -- schedule/data/schedule.json; then
-            echo "SUCCESS: Public schedule has not changed."
-            echo "No repository update is necessary."
-            exit 0
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          current_path = Path(
+              "schedule/data/schedule.json"
+          )
+
+          with current_path.open(
+              "r",
+              encoding="utf-8",
+          ) as file:
+              new_data = json.load(file)
+
+          try:
+              old_json = subprocess.check_output(
+                  [
+                      "git",
+                      "show",
+                      "HEAD:schedule/data/schedule.json",
+                  ],
+                  text=True,
+              )
+
+              old_data = json.loads(old_json)
+
+          except (
+              subprocess.CalledProcessError,
+              json.JSONDecodeError,
+          ):
+              old_data = {}
+
+          public_changed = (
+              old_data.get("schemaVersion")
+              != new_data.get("schemaVersion")
+              or
+              old_data.get("weeks")
+              != new_data.get("weeks")
+          )
+
+          with open(
+              "schedule-change.txt",
+              "w",
+              encoding="utf-8",
+          ) as file:
+              file.write(
+                  "true"
+                  if public_changed
+                  else "false"
+              )
+
+          if public_changed:
+              print(
+                  "Public schedule content changed."
+              )
+          else:
+              print(
+                  "Workbook changed, but public schedule content did not."
+              )
+          PY
+
+          PUBLIC_CHANGED=$(cat schedule-change.txt)
+
+          echo "public_changed=$PUBLIC_CHANGED" >> "$GITHUB_OUTPUT"
+
+      - name: Commit processed schedule state
+        if: steps.source_check.outputs.changed == 'true'
+        shell: bash
+        run: |
+          PUBLIC_CHANGED="${{ steps.schedule_check.outputs.public_changed }}"
+
+          if [ "$PUBLIC_CHANGED" = "true" ]; then
+            echo "Public schedule changed."
+            echo "Updating schedule content and source timestamp."
+          else
+            echo "Public schedule did not change."
+            echo "Updating source timestamp only."
           fi
 
-          echo "Public schedule changed."
+          if git diff --quiet -- schedule/data/schedule.json; then
+            echo
+            echo "SUCCESS: No repository update is necessary."
+            exit 0
+          fi
 
           git config user.name "Blue Mountain Pilates Schedule Bot"
           git config user.email "actions@github.com"
 
           git add schedule/data/schedule.json
-          git commit -m "Update live schedule"
+
+          if [ "$PUBLIC_CHANGED" = "true" ]; then
+            git commit -m "Update live schedule"
+          else
+            git commit -m "Record processed schedule workbook"
+          fi
+
           git push
 
-          echo "SUCCESS: Updated schedule.json was committed to the repository."
+          echo
+          echo "SUCCESS: Processed workbook state was committed to the repository."
