@@ -103,3 +103,46 @@ jobs:
       - name: Resolve web schedule ranges
         run: |
           python schedule/scripts/extract_schedule.py Studio_schedule2026.xlsx
+
+      - name: Inspect generated schedule JSON
+        run: |
+          echo "Generated JSON size:"
+          ls -lh schedule/data/schedule.json
+
+          echo
+          echo "Schedule summary:"
+
+          python - <<'PY'
+          import json
+
+          with open(
+              "schedule/data/schedule.json",
+              "r",
+              encoding="utf-8",
+          ) as file:
+              data = json.load(file)
+
+          print(
+              "Schema version:",
+              data["schemaVersion"],
+          )
+
+          print(
+              "Weeks:",
+              len(data["weeks"]),
+          )
+
+          for week in data["weeks"]:
+              print(
+                  week["key"],
+                  "->",
+                  week["sourceSheet"]
+                  + "!"
+                  + week["sourceRange"],
+                  "|",
+                  week["rowCount"],
+                  "rows x",
+                  week["columnCount"],
+                  "columns",
+              )
+          PY

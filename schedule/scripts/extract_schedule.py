@@ -1,18 +1,17 @@
 from pathlib import Path
+import json
 import re
 import sys
 
 from openpyxl import load_workbook
+from openpyxl.styles.colors import COLOR_INDEXED
 
 
 DEFAULT_WORKBOOK = "Studio_schedule2026.xlsx"
+DEFAULT_OUTPUT = "schedule/data/schedule.json"
 
 
 def get_workbook_path() -> Path:
-    """
-    Use a workbook path supplied on the command line if present.
-    Otherwise use the filename downloaded by the GitHub workflow.
-    """
     if len(sys.argv) > 1:
         return Path(sys.argv[1])
 
@@ -20,10 +19,6 @@ def get_workbook_path() -> Path:
 
 
 def normalize_defined_name_formula(value: str) -> str:
-    """
-    Excel defined names may be returned with or without a leading '='.
-    Normalize them for easier processing.
-    """
     value = value.strip()
 
     if value.startswith("="):
@@ -33,33 +28,19 @@ def normalize_defined_name_formula(value: str) -> str:
 
 
 def is_direct_range_reference(value: str) -> bool:
-    """
-    Determine whether a defined name points directly to a worksheet range.
-
-    Examples:
-        Aug!$A$50:$H$64
-        'Some Sheet'!$A$1:$H$20
-    """
     return "!" in value
 
 
 def parse_direct_range(value: str):
-    """
-    Convert an Excel reference such as:
-
-        Aug!$A$50:$H$64
-
-    into:
-
-        ("Aug", "A50:H64")
-    """
     match = re.match(
         r"^'?(.+?)'?!\$?([A-Z]+)\$?(\d+):\$?([A-Z]+)\$?(\d+)$",
         value,
     )
 
     if not match:
-        raise ValueError(f"Could not parse range reference: {value}")
+        raise ValueError(
+            f"Could not parse range reference: {value}"
+        )
 
     sheet_name = match.group(1)
 
@@ -72,28 +53,28 @@ def parse_direct_range(value: str):
 
 
 def resolve_defined_name(workbook, name: str, visited=None):
-    """
-    Resolve a workbook defined name recursively.
-
-    This handles the structure already used in the schedule workbook:
-
-        Web_ThisWeek -> AugWk4 -> Aug!A50:H64
-    """
     if visited is None:
-        visited = set()
+        visited = []
 
     if name in visited:
-        chain = " -> ".join(list(visited) + [name])
-        raise ValueError(f"Circular defined-name reference detected: {chain}")
+        chain = " -> ".join(visited + [name])
 
-    visited.add(name)
+        raise ValueError(
+            f"Circular defined-name reference detected: {chain}"
+        )
+
+    visited = visited + [name]
 
     defined_name = workbook.defined_names.get(name)
 
     if defined_name is None:
-        raise KeyError(f"Defined name not found: {name}")
+        raise KeyError(
+            f"Defined name not found: {name}"
+        )
 
-    reference = normalize_defined_name_formula(defined_name.attr_text)
+    reference = normalize_defined_name_formula(
+        defined_name.attr_text
+    )
 
     if is_direct_range_reference(reference):
         sheet_name, cell_range = parse_direct_range(reference)
@@ -110,11 +91,10 @@ def resolve_defined_name(workbook, name: str, visited=None):
             "range": cell_range,
         }
 
-    # Otherwise this defined name points to another defined name.
     resolved = resolve_defined_name(
         workbook,
         reference,
-        visited.copy(),
+        visited,
     )
 
     return {
@@ -126,16 +106,6 @@ def resolve_defined_name(workbook, name: str, visited=None):
 
 
 def web_name_sort_key(name: str):
-    """
-    Put the web aliases in their intended display order.
-
-    Web_ThisWeek
-    Web_NextWeek
-    Web_WeekPlus2
-    Web_WeekPlus3
-    Web_WeekPlus4
-    ...
-    """
     if name == "Web_ThisWeek":
         return 0
 
@@ -150,19 +120,200 @@ def web_name_sort_key(name: str):
     return 999
 
 
+def color_to_hex(color):
+    """
+    Convert common Excel colors to #RRGGBB.
+
+    Theme colors are intentionally identified separately for now.
+    We don't want to guess at theme transformations during this
+    first extraction pass.
+    """
+    if color is None:
+        return None
+
+    if color.type == "rgb" and color.rgb:
+        return f"#{color.rgb[-6:]}"
+
+    if color.type == "indexed":
+        index = color.indexed
+
+        if (
+            index is not None
+            and isinstance(index, int)
+            and index < len(COLOR_INDEXED)
+        ):
+            value = COLOR_INDEXED[index]
+
+            if value:
+                return f"#{value[-6:]}"
+
+    if color.type == "theme":
+        return {
+            "theme": color.theme,
+            "tint": color.tint,
+        }
+
+    return None
+
+
+def border_style(side):
+    if side is None or side.style is None:
+        return None
+
+    return {
+        "style": side.style,
+        "color": color_to_hex(side.color),
+    }
+
+
+def extract_cell_style(cell):
+    fill = cell.fill
+
+    fill_info = {
+        "type": fill.fill_type,
+        "foreground": color_to_hex(fill.fgColor),
+        "background": color_to_hex(fill.bgColor),
+    }
+
+    return {
+        "bold": bool(cell.font.bold),
+        "italic": bool(cell.font.italic),
+        "fontSize": cell.font.sz,
+        "fill": fill_info,
+        "alignment": {
+            "horizontal": cell.alignment.horizontal,
+            "vertical": cell.alignment.vertical,
+            "wrapText": bool(cell.alignment.wrap_text),
+        },
+        "borders": {
+            "left": border_style(cell.border.left),
+            "right": border_style(cell.border.right),
+            "top": border_style(cell.border.top),
+            "bottom": border_style(cell.border.bottom),
+        },
+    }
+
+
+def find_merge_for_cell(worksheet, cell):
+    """
+    Return merge information only for the upper-left cell
+    of a merged range.
+
+    Covered cells do not need to be represented separately
+    in the JSON.
+    """
+    for merged_range in worksheet.merged_cells.ranges:
+        if cell.coordinate not in merged_range:
+            continue
+
+        if (
+            cell.row == merged_range.min_row
+            and cell.column == merged_range.min_col
+        ):
+            return {
+                "rowspan":
+                    merged_range.max_row
+                    - merged_range.min_row
+                    + 1,
+                "colspan":
+                    merged_range.max_col
+                    - merged_range.min_col
+                    + 1,
+            }
+
+        return {
+            "covered": True,
+        }
+
+    return None
+
+
+def extract_week(workbook, web_name):
+    resolved = resolve_defined_name(
+        workbook,
+        web_name,
+    )
+
+    worksheet = workbook[resolved["sheet"]]
+
+    cells = worksheet[resolved["range"]]
+
+    rows = []
+
+    for excel_row in cells:
+        row_data = []
+
+        for cell in excel_row:
+            merge_info = find_merge_for_cell(
+                worksheet,
+                cell,
+            )
+
+            if (
+                merge_info
+                and merge_info.get("covered")
+            ):
+                continue
+
+            value = cell.value
+
+            if value is None:
+                value = ""
+            else:
+                value = str(value)
+
+            cell_data = {
+                "text": value,
+                "style": extract_cell_style(cell),
+            }
+
+            if merge_info:
+                if merge_info["rowspan"] > 1:
+                    cell_data["rowspan"] = (
+                        merge_info["rowspan"]
+                    )
+
+                if merge_info["colspan"] > 1:
+                    cell_data["colspan"] = (
+                        merge_info["colspan"]
+                    )
+
+            row_data.append(cell_data)
+
+        rows.append(row_data)
+
+    return {
+        "key": web_name,
+        "sourceName": resolved.get(
+            "points_to",
+            web_name,
+        ),
+        "sourceSheet": resolved["sheet"],
+        "sourceRange": resolved["range"],
+        "rowCount": len(cells),
+        "columnCount": len(cells[0]),
+        "rows": rows,
+    }
+
+
 def main():
     workbook_path = get_workbook_path()
 
-    print(f"Opening workbook: {workbook_path}")
+    output_path = Path(DEFAULT_OUTPUT)
+
+    print(
+        f"Opening workbook: {workbook_path}"
+    )
 
     if not workbook_path.exists():
         raise FileNotFoundError(
-            f"Workbook does not exist: {workbook_path}"
+            f"Workbook does not exist: "
+            f"{workbook_path}"
         )
 
     workbook = load_workbook(
         workbook_path,
-        data_only=False,
+        data_only=True,
         read_only=False,
     )
 
@@ -177,34 +328,82 @@ def main():
 
     if not web_names:
         raise RuntimeError(
-            "No workbook-level defined names beginning with 'Web_' were found."
+            "No workbook-level defined names beginning "
+            "with 'Web_' were found."
         )
 
-    print()
-    print(f"Found {len(web_names)} web schedule aliases:")
-    print()
+    print(
+        f"Found {len(web_names)} "
+        f"web schedule aliases."
+    )
 
-    for name in web_names:
-        resolved = resolve_defined_name(workbook, name)
+    weeks = []
+
+    for web_name in web_names:
+        resolved = resolve_defined_name(
+            workbook,
+            web_name,
+        )
 
         intermediate = resolved.get("points_to")
 
         if intermediate:
             print(
-                f"{name}"
+                f"{web_name}"
                 f" -> {intermediate}"
-                f" -> {resolved['sheet']}!{resolved['range']}"
+                f" -> {resolved['sheet']}"
+                f"!{resolved['range']}"
             )
         else:
             print(
-                f"{name}"
-                f" -> {resolved['sheet']}!{resolved['range']}"
+                f"{web_name}"
+                f" -> {resolved['sheet']}"
+                f"!{resolved['range']}"
             )
+
+        weeks.append(
+            extract_week(
+                workbook,
+                web_name,
+            )
+        )
+
+    schedule_data = {
+        "schemaVersion": 1,
+        "weeks": weeks,
+    }
+
+    output_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    with output_path.open(
+        "w",
+        encoding="utf-8",
+    ) as output_file:
+        json.dump(
+            schedule_data,
+            output_file,
+            indent=2,
+            ensure_ascii=False,
+        )
+
+        output_file.write("\n")
 
     print()
     print(
-        "SUCCESS: All Web_ schedule aliases resolved "
-        "to valid workbook ranges."
+        f"Created: {output_path}"
+    )
+
+    print(
+        f"Extracted {len(weeks)} "
+        f"web schedule weeks."
+    )
+
+    print(
+        "SUCCESS: Public schedule JSON "
+        "was generated."
     )
 
 
