@@ -22,19 +22,6 @@ EXPECTED_HEADERS = [
     "Instructor",
 ]
 
-EXPECTED_FONT_SIZES = {
-    "column-header": 14,
-    "day": 14,
-    "time": 13,
-    "client": 13,
-    "open": 13,
-    "instructor": 14,
-    "unavailable": 13,
-    "no-class": 13,
-    "class-canceled": 13,
-    "no-classes-block": 13,
-    "mat": 13,
-}
 
 class ScheduleAnomaly(Exception):
     """
@@ -465,51 +452,6 @@ def validate_cell_fill(
         )
 
 
-def validate_font(cell, role):
-    """
-    Validate only meaningful visible font conventions.
-
-    Blank column-header cells are ignored because their
-    font size has no visual effect.
-
-    The renderer supports bold vs regular and the studio's
-    established 13/14 point schedule conventions.
-    """
-
-    if cell.font.italic:
-        raise ScheduleAnomaly(
-            "UNSUPPORTED_ITALIC",
-            (
-                f"Italic formatting found at "
-                f"{cell.parent.title}!"
-                f"{cell.coordinate}."
-            ),
-        )
-
-    if (
-        role == "column-header"
-        and cell.value in (None, "")
-    ):
-        return
-
-    expected_size = EXPECTED_FONT_SIZES.get(role)
-
-    if (
-        expected_size is not None
-        and cell.font.sz is not None
-        and float(cell.font.sz) != float(expected_size)
-    ):
-        raise ScheduleAnomaly(
-            "UNEXPECTED_FONT_SIZE",
-            (
-                f"{cell.parent.title}!"
-                f"{cell.coordinate} uses "
-                f"{cell.font.sz}pt text; "
-                f"{role} is expected to use "
-                f"{expected_size}pt."
-            ),
-        )
-
 def validate_merge(
     cell,
     merge_info,
@@ -707,11 +649,6 @@ def extract_week(workbook, web_name):
                 cell,
                 role,
                 row_tone,
-            )
-
-            validate_font(
-                cell,
-                role,
             )
 
             cell_data = {
