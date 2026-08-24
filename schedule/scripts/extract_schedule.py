@@ -119,84 +119,12 @@ def web_name_sort_key(name: str):
     return 999
 
 
-def color_to_json(color):
-    """
-    Convert an Excel color into a JSON-safe representation.
-
-    RGB colors are converted to #RRGGBB.
-    Theme and indexed colors are preserved as references so
-    we do not depend on openpyxl's internal color tables.
-    """
-    if color is None:
-        return None
-
-    if color.type == "rgb" and color.rgb:
-        return f"#{color.rgb[-6:]}"
-
-    if color.type == "theme":
-        return {
-            "theme": color.theme,
-            "tint": color.tint,
-        }
-
-    if color.type == "indexed":
-        return {
-            "indexed": color.indexed,
-        }
-
-    if color.type == "auto":
-        return {
-            "auto": True,
-        }
-
-    return None
-
-
-def border_style(side):
-    if side is None or side.style is None:
-        return None
-
-    return {
-        "style": side.style,
-        "color": color_to_json(side.color),
-    }
-
-
-def extract_cell_style(cell):
-    fill = cell.fill
-
-    fill_info = {
-        "type": fill.fill_type,
-        "foreground": color_to_json(fill.fgColor),
-        "background": color_to_json(fill.bgColor),
-    }
-
-    return {
-        "bold": bool(cell.font.bold),
-        "italic": bool(cell.font.italic),
-        "fontSize": cell.font.sz,
-        "fill": fill_info,
-        "alignment": {
-            "horizontal": cell.alignment.horizontal,
-            "vertical": cell.alignment.vertical,
-            "wrapText": bool(cell.alignment.wrap_text),
-        },
-        "borders": {
-            "left": border_style(cell.border.left),
-            "right": border_style(cell.border.right),
-            "top": border_style(cell.border.top),
-            "bottom": border_style(cell.border.bottom),
-        },
-    }
-
-
 def find_merge_for_cell(worksheet, cell):
     """
-    Return merge information only for the upper-left cell
-    of a merged range.
+    Return merge information for a cell.
 
-    Covered cells do not need to be represented separately
-    in the JSON.
+    Only the upper-left cell of a merged range is emitted.
+    The other covered cells are omitted from JSON.
     """
     for merged_range in worksheet.merged_cells.ranges:
         if cell.coordinate not in merged_range:
@@ -224,6 +152,129 @@ def find_merge_for_cell(worksheet, cell):
     return None
 
 
+def get_row_tone(first_cell, is_header):
+    """
+    Translate the workbook's alternating day fills into
+    simple semantic tones.
+
+    In this workbook:
+      theme 9 = green
+      theme 7 = blue
+    """
+    if is_header:
+        return "neutral"
+
+    fill = first_cell.fill
+
+    if fill.fill_type == "solid":
+        color = fill.fgColor
+
+        if color.type == "theme":
+            if color.theme == 9:
+                return "green"
+
+            if color.theme == 7:
+                return "blue"
+
+    return "neutral"
+
+
+def is_unavailable_cell(cell):
+    """
+    Detect Excel's hatched unavailable cells.
+    """
+    return cell.fill.fill_type == "gray125"
+
+
+def classify_cell(
+    cell,
+    text,
+    relative_column,
+    is_header,
+):
+    """
+    Assign a semantic role used later by CSS/JavaScript.
+
+    Relative columns:
+      0 = day/date
+      1 = time
+      2-6 = apparatus/client slots
+      7 = instructor
+    """
+    clean_text = text.strip()
+    upper_text = clean_text.upper()
+
+    if is_header:
+        return "column-header"
+
+    if is_unavailable_cell(cell):
+        return "unavailable"
+
+    if upper_text == "OPEN":
+        return "open"
+
+    if upper_text.startswith("NO CLASSES -"):
+        return "no-classes-block"
+
+    if upper_text.startswith("CLASS CANCELED"):
+        return "class-canceled"
+
+    if upper_text.startswith("NO CLASS"):
+        return "no-class"
+
+    if upper_text.startswith("MAT:"):
+        return "mat"
+
+    if relative_column == 0:
+        return "day"
+
+    if relative_column == 1:
+        return "time"
+
+    if relative_column == 7:
+        return "instructor"
+
+    if 2 <= relative_column <= 6:
+        return "client"
+
+    return "cell"
+
+
+def extract_geometry(worksheet, cells):
+    """
+    Preserve the fixed Excel geometry once per week,
+    rather than repeating it on every cell.
+    """
+    first_row = cells[0]
+
+    column_widths = []
+
+    for cell in first_row:
+        column_letter = cell.column_letter
+
+        width = worksheet.column_dimensions[
+            column_letter
+        ].width
+
+        column_widths.append(width)
+
+    row_heights = []
+
+    for excel_row in cells:
+        row_number = excel_row[0].row
+
+        height = worksheet.row_dimensions[
+            row_number
+        ].height
+
+        row_heights.append(height)
+
+    return {
+        "columnWidths": column_widths,
+        "rowHeights": row_heights,
+    }
+
+
 def extract_week(workbook, web_name):
     resolved = resolve_defined_name(
         workbook,
@@ -231,15 +282,24 @@ def extract_week(workbook, web_name):
     )
 
     worksheet = workbook[resolved["sheet"]]
-
     cells = worksheet[resolved["range"]]
 
     rows = []
 
-    for excel_row in cells:
-        row_data = []
+    for row_index, excel_row in enumerate(cells):
+        is_header = row_index == 0
 
-        for cell in excel_row:
+        row_tone = get_row_tone(
+            excel_row[0],
+            is_header,
+        )
+
+        row_data = {
+            "tone": row_tone,
+            "cells": [],
+        }
+
+        for relative_column, cell in enumerate(excel_row):
             merge_info = find_merge_for_cell(
                 worksheet,
                 cell,
@@ -254,14 +314,22 @@ def extract_week(workbook, web_name):
             value = cell.value
 
             if value is None:
-                value = ""
+                text = ""
             else:
-                value = str(value)
+                text = str(value)
 
             cell_data = {
-                "text": value,
-                "style": extract_cell_style(cell),
+                "text": text,
+                "style": classify_cell(
+                    cell,
+                    text,
+                    relative_column,
+                    is_header,
+                ),
             }
+
+            if cell.font.bold:
+                cell_data["bold"] = True
 
             if merge_info:
                 if merge_info["rowspan"] > 1:
@@ -274,9 +342,16 @@ def extract_week(workbook, web_name):
                         merge_info["colspan"]
                     )
 
-            row_data.append(cell_data)
+            row_data["cells"].append(
+                cell_data
+            )
 
         rows.append(row_data)
+
+    geometry = extract_geometry(
+        worksheet,
+        cells,
+    )
 
     return {
         "key": web_name,
@@ -288,13 +363,43 @@ def extract_week(workbook, web_name):
         "sourceRange": resolved["range"],
         "rowCount": len(cells),
         "columnCount": len(cells[0]),
+        "columnWidths": geometry["columnWidths"],
+        "rowHeights": geometry["rowHeights"],
         "rows": rows,
     }
 
 
+def validate_week(week):
+    """
+    Basic sanity checks before allowing the week
+    into the published JSON.
+    """
+    if week["columnCount"] != 8:
+        raise ValueError(
+            f"{week['key']} contains "
+            f"{week['columnCount']} columns; expected 8."
+        )
+
+    if week["rowCount"] < 2:
+        raise ValueError(
+            f"{week['key']} contains too few rows."
+        )
+
+    if not week["rows"]:
+        raise ValueError(
+            f"{week['key']} contains no schedule data."
+        )
+
+    header_cells = week["rows"][0]["cells"]
+
+    if len(header_cells) < 8:
+        raise ValueError(
+            f"{week['key']} header is incomplete."
+        )
+
+
 def main():
     workbook_path = get_workbook_path()
-
     output_path = Path(DEFAULT_OUTPUT)
 
     print(
@@ -357,15 +462,17 @@ def main():
                 f"!{resolved['range']}"
             )
 
-        weeks.append(
-            extract_week(
-                workbook,
-                web_name,
-            )
+        week = extract_week(
+            workbook,
+            web_name,
         )
 
+        validate_week(week)
+
+        weeks.append(week)
+
     schedule_data = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "weeks": weeks,
     }
 
@@ -398,7 +505,7 @@ def main():
     )
 
     print(
-        "SUCCESS: Public schedule JSON "
+        "SUCCESS: Lean public schedule JSON "
         "was generated."
     )
 
