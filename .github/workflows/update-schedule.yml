@@ -146,3 +146,10 @@ jobs:
                   "columns",
               )
           PY
+
+      - name: Upload schedule JSON for testing
+        uses: actions/upload-artifact@v4
+        with:
+          name: schedule-json
+          path: schedule/data/schedule.json
+          retention-days: 1
