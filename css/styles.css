@@ -292,6 +292,224 @@ body.weekly-page { background: var(--surface); }
 }
 
 /* =========================================================
+   LIVE SCHEDULE RENDERER
+   ========================================================= */
+
+body.schedule-page #live-schedule {
+  margin-top: 1.5rem;
+}
+
+/* Each displayed week */
+body.schedule-page .schedule-week {
+  margin: 0 0 3rem;
+}
+
+body.schedule-page .schedule-week-heading {
+  margin: 0 0 0.75rem;
+}
+
+/* Keeps the Excel-style table geometry fixed.
+   On smaller screens, the container scrolls rather than
+   allowing the browser to resize the columns. */
+body.schedule-page .schedule-table-frame {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Main schedule table */
+body.schedule-page .schedule-grid {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto;
+  min-width: max-content;
+
+  font-family:
+    "Aptos Narrow",
+    "Arial Narrow",
+    Arial,
+    sans-serif;
+
+  color: #000;
+}
+
+/* Base cell treatment */
+body.schedule-page .schedule-cell {
+  box-sizing: border-box;
+  padding: 2px 5px;
+
+  border: 1px solid #000;
+
+  font-size: 13pt;
+  font-weight: 400;
+  line-height: 1;
+
+  text-align: center;
+  vertical-align: middle;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+/* Preserve bolding extracted from Excel */
+body.schedule-page .schedule-bold {
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   COLUMN HEADER ROW
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-column-header {
+  font-size: 14pt;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* ---------------------------------------------------------
+   DAY / DATE
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-day {
+  font-size: 14pt;
+  text-align: left;
+  vertical-align: middle;
+}
+
+
+/* ---------------------------------------------------------
+   TIME
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-time {
+  font-size: 13pt;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* ---------------------------------------------------------
+   CLIENT / OPEN / INSTRUCTOR
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-client {
+  font-size: 13pt;
+  text-align: center;
+}
+
+body.schedule-page .schedule-open {
+  font-size: 13pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+body.schedule-page .schedule-instructor {
+  font-size: 13pt;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* ---------------------------------------------------------
+   SPECIAL CLASS / CANCELLATION MESSAGES
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-no-class,
+body.schedule-page .schedule-class-canceled,
+body.schedule-page .schedule-no-classes-block,
+body.schedule-page .schedule-mat {
+  font-size: 13pt;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Entire-day/block messages are typically emphasized
+   in Excel. The extractor will also preserve explicit bolding. */
+body.schedule-page .schedule-no-classes-block {
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   ALTERNATING DAY FILLS
+   These are derived from the actual Excel theme colors.
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-tone-green .schedule-cell {
+  background-color: #dcedd5;
+}
+
+body.schedule-page .schedule-tone-blue .schedule-cell {
+  background-color: #cfecf7;
+}
+
+body.schedule-page .schedule-tone-neutral .schedule-cell {
+  background-color: #fff;
+}
+
+
+/* ---------------------------------------------------------
+   UNAVAILABLE / HATCHED APPARATUS CELL
+   Preserve the existing row color and overlay hatch.
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-cell.schedule-unavailable {
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.20) 0,
+      rgba(0, 0, 0, 0.20) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+
+/* ---------------------------------------------------------
+   ERROR STATE
+   This displays only if schedule.json cannot be loaded.
+   --------------------------------------------------------- */
+
+body.schedule-page .schedule-load-error {
+  margin: 1.5rem 0;
+  padding: 1rem;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  border: 1px solid #bbb;
+  background: #f8f8f8;
+}
+
+
+/* ---------------------------------------------------------
+   SMALL SCREEN BEHAVIOR
+
+   Important:
+   We intentionally DO NOT make the table responsive internally.
+   Column widths and row heights remain fixed to match Excel.
+   The table frame scrolls horizontally when necessary.
+   --------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+  body.schedule-page .schedule-table-frame {
+    overflow-x: auto;
+  }
+
+  body.schedule-page .schedule-grid {
+    width: auto;
+    min-width: max-content;
+  }
+}
+
+/* =========================================================
    WEEKLY UPDATES ARCHIVE
    ========================================================= */
 
