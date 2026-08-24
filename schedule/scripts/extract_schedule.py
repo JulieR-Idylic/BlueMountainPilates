@@ -4,7 +4,6 @@ import re
 import sys
 
 from openpyxl import load_workbook
-from openpyxl.styles.colors import COLOR_INDEXED
 
 
 DEFAULT_WORKBOOK = "Studio_schedule2026.xlsx"
@@ -120,13 +119,13 @@ def web_name_sort_key(name: str):
     return 999
 
 
-def color_to_hex(color):
+def color_to_json(color):
     """
-    Convert common Excel colors to #RRGGBB.
+    Convert an Excel color into a JSON-safe representation.
 
-    Theme colors are intentionally identified separately for now.
-    We don't want to guess at theme transformations during this
-    first extraction pass.
+    RGB colors are converted to #RRGGBB.
+    Theme and indexed colors are preserved as references so
+    we do not depend on openpyxl's internal color tables.
     """
     if color is None:
         return None
@@ -134,23 +133,20 @@ def color_to_hex(color):
     if color.type == "rgb" and color.rgb:
         return f"#{color.rgb[-6:]}"
 
-    if color.type == "indexed":
-        index = color.indexed
-
-        if (
-            index is not None
-            and isinstance(index, int)
-            and index < len(COLOR_INDEXED)
-        ):
-            value = COLOR_INDEXED[index]
-
-            if value:
-                return f"#{value[-6:]}"
-
     if color.type == "theme":
         return {
             "theme": color.theme,
             "tint": color.tint,
+        }
+
+    if color.type == "indexed":
+        return {
+            "indexed": color.indexed,
+        }
+
+    if color.type == "auto":
+        return {
+            "auto": True,
         }
 
     return None
@@ -162,7 +158,7 @@ def border_style(side):
 
     return {
         "style": side.style,
-        "color": color_to_hex(side.color),
+        "color": color_to_json(side.color),
     }
 
 
@@ -171,8 +167,8 @@ def extract_cell_style(cell):
 
     fill_info = {
         "type": fill.fill_type,
-        "foreground": color_to_hex(fill.fgColor),
-        "background": color_to_hex(fill.bgColor),
+        "foreground": color_to_json(fill.fgColor),
+        "background": color_to_json(fill.bgColor),
     }
 
     return {
