@@ -629,6 +629,46 @@ jobs:
 
           echo "public_changed=$PUBLIC_CHANGED" >> "$GITHUB_OUTPUT"
 
+            - name: Add published time when schedule changed
+        if: steps.source_check.outputs.changed == 'true' && steps.schedule_check.outputs.public_changed == 'true'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path("schedule/data/schedule.json")
+
+          with path.open(
+              "r",
+              encoding="utf-8",
+          ) as file:
+              data = json.load(file)
+
+          data["publishedAt"] = (
+              datetime.now(timezone.utc).isoformat()
+          )
+
+          with path.open(
+              "w",
+              encoding="utf-8",
+          ) as file:
+              json.dump(
+                  data,
+                  file,
+                  indent=2,
+                  ensure_ascii=False,
+              )
+
+              file.write("\n")
+
+          print(
+              "INFO [PUBLISHED_AT]:",
+              data["publishedAt"],
+          )
+          PY
+
       - name: Commit processed schedule state
         id: publish
         if: steps.source_check.outputs.changed == 'true'

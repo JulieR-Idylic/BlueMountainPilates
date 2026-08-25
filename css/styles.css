@@ -268,6 +268,12 @@ body.schedule-page iframe.schedule {
   margin-bottom: 0.75rem;
 }
 
+body.schedule-page .schedule-last-updated {
+  margin: -0.35rem 0 0.6rem;
+  font-size: 0.82rem;
+  color: #666;
+}
+
 /* Weekly pages */
 body.weekly-page { background: var(--surface); }
 

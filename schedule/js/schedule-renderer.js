@@ -79,6 +79,9 @@ function renderSchedule(
 ) {
   container.innerHTML = "";
 
+  window.schedulePublishedAt =
+    schedule.publishedAt ?? null;
+
   schedule.weeks.forEach(
     (week, index) => {
       const section = buildWeekSection(
@@ -113,6 +116,22 @@ function buildWeekSection(
   );
 
   section.appendChild(heading);
+
+  if (window.schedulePublishedAt) {
+    const updated = document.createElement(
+      "p"
+    );
+
+    updated.className =
+      "schedule-last-updated";
+
+    updated.textContent =
+      `Schedule last updated: ${formatPublishedTime(
+        window.schedulePublishedAt
+      )}`;
+
+    section.appendChild(updated);
+  }
 
   const frame = document.createElement(
     "div"
@@ -300,6 +319,28 @@ function getWeekLabel(
 }
 
 
+function formatPublishedTime(
+  value
+) {
+  if (!value) {
+    return "";
+  }
+
+  const date = new Date(value);
+
+  return new Intl.DateTimeFormat(
+    "en-US",
+    {
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZone: "America/Los_Angeles",
+    }
+  ).format(date);
+}
+
+
 function excelColumnWidthToPixels(
   excelWidth
 ) {
@@ -310,14 +351,6 @@ function excelColumnWidthToPixels(
     return "90px";
   }
 
-  /*
-    Approximation used only to preserve
-    the fixed proportions already set
-    in Excel.
-
-    We can fine-tune this multiplier
-    during visual fit-and-finish.
-  */
   const pixels =
     Math.round(
       (width * 7) + 5
