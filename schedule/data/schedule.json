@@ -1340,9 +1340,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Natasha R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2239,6 +2238,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-25T22:52:49Z",
-  "publishedAt": "2026-08-25T22:33:32.521479+00:00"
+  "sourceLastModified": "2026-08-25T23:35:45Z",
+  "publishedAt": "2026-08-25T23:43:25.560106+00:00"
 }
