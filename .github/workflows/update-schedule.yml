@@ -244,6 +244,93 @@ jobs:
             echo "Continuing to download and inspect the public schedule."
           fi
 
+      - name: Preserve current published time
+        id: preserve_published
+        if: steps.source_check.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set +e
+
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+
+          try:
+              old_json = subprocess.check_output(
+                  [
+                      "git",
+                      "show",
+                      "HEAD:schedule/data/schedule.json",
+                  ],
+                  text=True,
+              )
+
+              old_data = json.loads(
+                  old_json
+              )
+
+              published_at = old_data.get(
+                  "publishedAt",
+                  ""
+              )
+
+              with open(
+                  "previous-published-at.txt",
+                  "w",
+                  encoding="utf-8",
+              ) as file:
+                  file.write(
+                      published_at
+                  )
+
+              if published_at:
+                  print(
+                      "INFO [PUBLISHED_AT_PRESERVED]:",
+                      published_at,
+                  )
+              else:
+                  print(
+                      "INFO [NO_PREVIOUS_PUBLISHED_AT]: "
+                      "No previous published time is recorded."
+                  )
+
+          except (
+              subprocess.CalledProcessError,
+              json.JSONDecodeError,
+          ):
+              with open(
+                  "previous-published-at.txt",
+                  "w",
+                  encoding="utf-8",
+              ) as file:
+                  file.write("")
+
+              print(
+                  "INFO [NO_PREVIOUS_PUBLISHED_AT]: "
+                  "No usable previous published time is available."
+              )
+
+          except Exception as error:
+              print(
+                  f"Unable to preserve published time: {error}",
+                  file=sys.stderr,
+              )
+              sys.exit(1)
+          PY
+
+          RESULT=$?
+
+          set -e
+
+          if [ "$RESULT" -ne 0 ]; then
+            echo "PIPELINE_ERROR_LEVEL=1" >> "$GITHUB_ENV"
+            echo "PIPELINE_ERROR_CODE=PUBLISHED_METADATA" >> "$GITHUB_ENV"
+
+            echo "::error::LEVEL 1 PIPELINE FAILURE [PUBLISHED_METADATA]: Unable to preserve the current published schedule timestamp."
+            exit 1
+          fi
+
       - name: Download exact schedule workbook
         id: workbook_download
         if: steps.source_check.outputs.changed == 'true'
@@ -368,7 +455,7 @@ jobs:
             exit 1
           fi
 
-      - name: Add source modified time to schedule JSON
+      - name: Add schedule metadata to generated JSON
         id: timestamp
         if: steps.source_check.outputs.changed == 'true'
         env:
@@ -387,6 +474,10 @@ jobs:
               "schedule/data/schedule.json"
           )
 
+          previous_path = Path(
+              "previous-published-at.txt"
+          )
+
           try:
               with path.open(
                   "r",
@@ -399,6 +490,20 @@ jobs:
                       "SOURCE_LAST_MODIFIED"
                   ]
               )
+
+              previous_published_at = ""
+
+              if previous_path.exists():
+                  previous_published_at = (
+                      previous_path.read_text(
+                          encoding="utf-8"
+                      ).strip()
+                  )
+
+              if previous_published_at:
+                  data["publishedAt"] = (
+                      previous_published_at
+                  )
 
               with path.open(
                   "w",
@@ -418,6 +523,12 @@ jobs:
                   data["sourceLastModified"],
               )
 
+              if previous_published_at:
+                  print(
+                      "INFO [PUBLISHED_AT_CARRIED_FORWARD]:",
+                      previous_published_at,
+                  )
+
           except Exception as error:
               print(
                   f"Unable to update schedule metadata: {error}",
@@ -434,7 +545,7 @@ jobs:
             echo "PIPELINE_ERROR_LEVEL=1" >> "$GITHUB_ENV"
             echo "PIPELINE_ERROR_CODE=JSON_METADATA" >> "$GITHUB_ENV"
 
-            echo "::error::LEVEL 1 PIPELINE FAILURE [JSON_METADATA]: Unable to record the processed workbook timestamp."
+            echo "::error::LEVEL 1 PIPELINE FAILURE [JSON_METADATA]: Unable to record schedule metadata."
             exit 1
           fi
 
@@ -486,6 +597,16 @@ jobs:
                   "Source last modified:",
                   data["sourceLastModified"],
               )
+
+              if data.get("publishedAt"):
+                  print(
+                      "Published at:",
+                      data["publishedAt"],
+                  )
+              else:
+                  print(
+                      "Published at: not yet recorded"
+                  )
 
               print(
                   "Weeks:",
@@ -630,11 +751,15 @@ jobs:
           echo "public_changed=$PUBLIC_CHANGED" >> "$GITHUB_OUTPUT"
 
       - name: Add published time when schedule changed
+        id: published_time
         if: steps.source_check.outputs.changed == 'true' && steps.schedule_check.outputs.public_changed == 'true'
         shell: bash
         run: |
+          set +e
+
           python3 - <<'PY'
           import json
+          import sys
           from datetime import datetime, timezone
           from pathlib import Path
 
@@ -642,36 +767,56 @@ jobs:
               "schedule/data/schedule.json"
           )
 
-          with path.open(
-              "r",
-              encoding="utf-8",
-          ) as file:
-              data = json.load(file)
+          try:
+              with path.open(
+                  "r",
+                  encoding="utf-8",
+              ) as file:
+                  data = json.load(file)
 
-          data["publishedAt"] = (
-              datetime.now(
-                  timezone.utc
-              ).isoformat()
-          )
-
-          with path.open(
-              "w",
-              encoding="utf-8",
-          ) as file:
-              json.dump(
-                  data,
-                  file,
-                  indent=2,
-                  ensure_ascii=False,
+              data["publishedAt"] = (
+                  datetime.now(
+                      timezone.utc
+                  ).isoformat()
               )
 
-              file.write("\n")
+              with path.open(
+                  "w",
+                  encoding="utf-8",
+              ) as file:
+                  json.dump(
+                      data,
+                      file,
+                      indent=2,
+                      ensure_ascii=False,
+                  )
 
-          print(
-              "INFO [PUBLISHED_AT]:",
-              data["publishedAt"],
-          )
+                  file.write("\n")
+
+              print(
+                  "INFO [PUBLISHED_AT]:",
+                  data["publishedAt"],
+              )
+
+          except Exception as error:
+              print(
+                  f"Unable to record published time: {error}",
+                  file=sys.stderr,
+              )
+              sys.exit(1)
           PY
+
+          RESULT=$?
+
+          set -e
+
+          if [ "$RESULT" -ne 0 ]; then
+            echo "PIPELINE_ERROR_LEVEL=1" >> "$GITHUB_ENV"
+            echo "PIPELINE_ERROR_CODE=PUBLISHED_METADATA" >> "$GITHUB_ENV"
+
+            echo "::error::LEVEL 1 PIPELINE FAILURE [PUBLISHED_METADATA]: Unable to record the schedule publication time."
+            exit 1
+          fi
 
       - name: Commit processed schedule state
         id: publish
@@ -682,10 +827,11 @@ jobs:
 
           if [ "$PUBLIC_CHANGED" = "true" ]; then
             echo "INFO [PUBLISH]: Public schedule changed."
-            echo "Updating schedule content and source timestamp."
+            echo "Updating schedule content, source timestamp, and published time."
           else
             echo "INFO [STATE_UPDATE]: Public schedule did not change."
             echo "Updating processed source timestamp only."
+            echo "Previous published time remains unchanged."
           fi
 
           if git diff --quiet -- schedule/data/schedule.json; then
@@ -745,11 +891,13 @@ jobs:
           DEPENDENCIES_OUTCOME: ${{ steps.dependencies.outcome }}
           GRAPH_AUTH_OUTCOME: ${{ steps.graph_auth.outcome }}
           SOURCE_CHECK_OUTCOME: ${{ steps.source_check.outcome }}
+          PRESERVE_PUBLISHED_OUTCOME: ${{ steps.preserve_published.outcome }}
           WORKBOOK_DOWNLOAD_OUTCOME: ${{ steps.workbook_download.outcome }}
           EXTRACTOR_OUTCOME: ${{ steps.extractor.outcome }}
           TIMESTAMP_OUTCOME: ${{ steps.timestamp.outcome }}
           JSON_VALIDATION_OUTCOME: ${{ steps.json_validation.outcome }}
           SCHEDULE_CHECK_OUTCOME: ${{ steps.schedule_check.outcome }}
+          PUBLISHED_TIME_OUTCOME: ${{ steps.published_time.outcome }}
           PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
         run: |
           ERROR_LEVEL="${PIPELINE_ERROR_LEVEL:-}"
@@ -777,6 +925,10 @@ jobs:
               ERROR_LEVEL="1"
               ERROR_CODE="WORKBOOK_METADATA"
 
+            elif [ "$PRESERVE_PUBLISHED_OUTCOME" = "failure" ]; then
+              ERROR_LEVEL="1"
+              ERROR_CODE="PUBLISHED_METADATA"
+
             elif [ "$WORKBOOK_DOWNLOAD_OUTCOME" = "failure" ]; then
               ERROR_LEVEL="1"
               ERROR_CODE="WORKBOOK_DOWNLOAD"
@@ -796,6 +948,10 @@ jobs:
             elif [ "$SCHEDULE_CHECK_OUTCOME" = "failure" ]; then
               ERROR_LEVEL="1"
               ERROR_CODE="SCHEDULE_COMPARE"
+
+            elif [ "$PUBLISHED_TIME_OUTCOME" = "failure" ]; then
+              ERROR_LEVEL="1"
+              ERROR_CODE="PUBLISHED_METADATA"
 
             elif [ "$PUBLISH_OUTCOME" = "failure" ]; then
               ERROR_LEVEL="1"
