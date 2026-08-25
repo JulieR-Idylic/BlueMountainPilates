@@ -169,10 +169,12 @@ body.home-page { background: var(--surface); }
 
 .page-hero__logo {
   width: 96px;
-  height: 96px;
-  border: 1px dashed var(--line);
-  border-radius: 12px;
-  background: rgba(255,255,255,0.45);
+}
+
+.page-hero__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .page-hero__content {
@@ -207,8 +209,6 @@ body.home-page { background: var(--surface); }
 
   .page-hero__logo {
     width: 120px;
-    height: 120px;
-    border-radius: 16px;
   }
 
   .page-hero__title {
@@ -223,7 +223,6 @@ body.home-page { background: var(--surface); }
 
   .page-hero__logo {
     width: 84px;
-    height: 84px;
   }
 }
 
