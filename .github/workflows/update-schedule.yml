@@ -4,9 +4,15 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "30-59/10 4 * * *"
       timezone: "America/Los_Angeles"
-      
+
+    - cron: "*/10 5-21 * * *"
+      timezone: "America/Los_Angeles"
+
+    - cron: "0 22 * * *"
+      timezone: "America/Los_Angeles"
+
 permissions:
   contents: write
 

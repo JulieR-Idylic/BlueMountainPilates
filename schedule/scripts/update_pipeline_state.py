@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 import argparse
 import json
+import os
 import sys
 
 
@@ -12,16 +13,20 @@ def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
 
+def default_state():
+    return {
+        "status": "healthy",
+        "errorLevel": None,
+        "errorCode": None,
+        "firstDetected": None,
+        "lastDetected": None,
+        "lastNotified": None,
+    }
+
+
 def load_state(path):
     if not path.exists() or path.stat().st_size == 0:
-        return {
-            "status": "healthy",
-            "errorLevel": None,
-            "errorCode": None,
-            "firstDetected": None,
-            "lastDetected": None,
-            "lastNotified": None,
-        }
+        return default_state()
 
     with path.open(
         "r",
@@ -57,21 +62,9 @@ def save_state(path, state):
 
 
 def emit_output(name, value):
-    """
-    GitHub Actions can provide GITHUB_OUTPUT.
-
-    When running elsewhere, we still print the result
-    so the script remains independently understandable.
-    """
-    output_path = None
-
-    try:
-        import os
-        output_path = os.environ.get(
-            "GITHUB_OUTPUT"
-        )
-    except Exception:
-        pass
+    output_path = os.environ.get(
+        "GITHUB_OUTPUT"
+    )
 
     if output_path:
         with open(
@@ -89,11 +82,19 @@ def emit_output(name, value):
 
 
 def handle_healthy(previous_state):
-    now = utc_now()
+    """
+    Healthy -> Healthy:
+        No state-file change.
+        GitHub Actions history is our heartbeat log.
 
-    if previous_state.get(
-        "status"
-    ) == "failed":
+    Failed -> Healthy:
+        This is a meaningful recovery transition.
+        Update persistent state and request notification.
+    """
+
+    if previous_state.get("status") == "failed":
+        now = utc_now()
+
         new_state = {
             "status": "healthy",
             "errorLevel": None,
@@ -110,23 +111,13 @@ def handle_healthy(previous_state):
             new_state,
             "recovered",
             True,
+            True,
         )
 
-    new_state = {
-        "status": "healthy",
-        "errorLevel": None,
-        "errorCode": None,
-        "firstDetected": None,
-        "lastDetected": now,
-        "lastNotified":
-            previous_state.get(
-                "lastNotified"
-            ),
-    }
-
     return (
-        new_state,
+        previous_state,
         "healthy",
+        False,
         False,
     )
 
@@ -136,7 +127,13 @@ def handle_failure(
     level,
     code,
 ):
-    now = utc_now()
+    """
+    Same failure -> Same failure:
+        Do not rewrite the state file.
+
+    Healthy -> Failed, or one failure -> different failure:
+        Record the new incident and request notification.
+    """
 
     same_incident = (
         previous_state.get("status")
@@ -154,26 +151,14 @@ def handle_failure(
     )
 
     if same_incident:
-        new_state = {
-            "status": "failed",
-            "errorLevel": level,
-            "errorCode": code,
-            "firstDetected":
-                previous_state.get(
-                    "firstDetected"
-                ),
-            "lastDetected": now,
-            "lastNotified":
-                previous_state.get(
-                    "lastNotified"
-                ),
-        }
-
         return (
-            new_state,
+            previous_state,
             "continuing_failure",
             False,
+            False,
         )
+
+    now = utc_now()
 
     new_state = {
         "status": "failed",
@@ -187,6 +172,7 @@ def handle_failure(
     return (
         new_state,
         "new_failure",
+        True,
         True,
     )
 
@@ -254,6 +240,7 @@ def main():
             new_state,
             transition,
             notify,
+            state_changed,
         ) = handle_healthy(
             previous_state
         )
@@ -263,16 +250,18 @@ def main():
             new_state,
             transition,
             notify,
+            state_changed,
         ) = handle_failure(
             previous_state,
             args.level,
             args.code,
         )
 
-    save_state(
-        state_path,
-        new_state,
-    )
+    if state_changed:
+        save_state(
+            state_path,
+            new_state,
+        )
 
     print()
     print(
@@ -318,6 +307,13 @@ def main():
         else "no",
     )
 
+    print(
+        "Persistent state changed:",
+        "yes"
+        if state_changed
+        else "no",
+    )
+
     emit_output(
         "transition",
         transition,
@@ -333,6 +329,13 @@ def main():
     emit_output(
         "status",
         new_state["status"],
+    )
+
+    emit_output(
+        "state_changed",
+        "true"
+        if state_changed
+        else "false",
     )
 
     emit_output(
