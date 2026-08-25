@@ -629,7 +629,7 @@ jobs:
 
           echo "public_changed=$PUBLIC_CHANGED" >> "$GITHUB_OUTPUT"
 
-            - name: Add published time when schedule changed
+      - name: Add published time when schedule changed
         if: steps.source_check.outputs.changed == 'true' && steps.schedule_check.outputs.public_changed == 'true'
         shell: bash
         run: |
@@ -638,7 +638,9 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-          path = Path("schedule/data/schedule.json")
+          path = Path(
+              "schedule/data/schedule.json"
+          )
 
           with path.open(
               "r",
@@ -647,7 +649,9 @@ jobs:
               data = json.load(file)
 
           data["publishedAt"] = (
-              datetime.now(timezone.utc).isoformat()
+              datetime.now(
+                  timezone.utc
+              ).isoformat()
           )
 
           with path.open(
