@@ -16,26 +16,20 @@ async function loadSchedule() {
   }
 
   try {
-    const response = await fetch(
-      "data/schedule.json",
-      {
-        cache: "no-store"
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(
-        `Schedule JSON request failed: ${response.status}`
-      );
-    }
-
-    const schedule = await response.json();
+    const [
+      schedule,
+      lastSuccessfulRefresh
+    ] = await Promise.all([
+      fetchScheduleData(),
+      fetchLastSuccessfulRefresh()
+    ]);
 
     validateSchedule(schedule);
 
     renderSchedule(
       container,
-      schedule
+      schedule,
+      lastSuccessfulRefresh
     );
   }
   catch (error) {
@@ -45,6 +39,76 @@ async function loadSchedule() {
     );
 
     renderLoadError(container);
+  }
+}
+
+
+async function fetchScheduleData() {
+  const response = await fetch(
+    "data/schedule.json",
+    {
+      cache: "no-store"
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      `Schedule JSON request failed: ${response.status}`
+    );
+  }
+
+  return response.json();
+}
+
+
+async function fetchLastSuccessfulRefresh() {
+  const apiUrl =
+    "https://api.github.com/repos/JulieR-Idylic/BlueMountainPilates/actions/workflows/update-schedule.yml/runs?status=success&per_page=1";
+
+  try {
+    const response = await fetch(
+      apiUrl,
+      {
+        cache: "no-store",
+        headers: {
+          "Accept": "application/vnd.github+json"
+        }
+      }
+    );
+
+    if (!response.ok) {
+      console.warn(
+        `Unable to retrieve last successful schedule refresh: ${response.status}`
+      );
+
+      return null;
+    }
+
+    const data = await response.json();
+
+    if (
+      !Array.isArray(data.workflow_runs) ||
+      data.workflow_runs.length === 0
+    ) {
+      return null;
+    }
+
+    const run = data.workflow_runs[0];
+
+    return (
+      run.updated_at ||
+      run.run_started_at ||
+      run.created_at ||
+      null
+    );
+  }
+  catch (error) {
+    console.warn(
+      "Unable to retrieve last successful schedule refresh:",
+      error
+    );
+
+    return null;
   }
 }
 
@@ -75,18 +139,17 @@ function validateSchedule(schedule) {
 
 function renderSchedule(
   container,
-  schedule
+  schedule,
+  lastSuccessfulRefresh
 ) {
   container.innerHTML = "";
-
-  window.schedulePublishedAt =
-    schedule.publishedAt ?? null;
 
   schedule.weeks.forEach(
     (week, index) => {
       const section = buildWeekSection(
         week,
-        index
+        index,
+        lastSuccessfulRefresh
       );
 
       container.appendChild(section);
@@ -97,7 +160,8 @@ function renderSchedule(
 
 function buildWeekSection(
   week,
-  index
+  index,
+  lastSuccessfulRefresh
 ) {
   const section = document.createElement(
     "section"
@@ -117,20 +181,20 @@ function buildWeekSection(
 
   section.appendChild(heading);
 
-  if (window.schedulePublishedAt) {
-    const updated = document.createElement(
+  if (lastSuccessfulRefresh) {
+    const refreshed = document.createElement(
       "p"
     );
 
-    updated.className =
+    refreshed.className =
       "schedule-last-updated";
 
-    updated.textContent =
-      `Schedule last updated: ${formatPublishedTime(
-        window.schedulePublishedAt
+    refreshed.textContent =
+      `Schedule last refreshed: ${formatRefreshTime(
+        lastSuccessfulRefresh
       )}`;
 
-    section.appendChild(updated);
+    section.appendChild(refreshed);
   }
 
   const frame = document.createElement(
@@ -319,7 +383,7 @@ function getWeekLabel(
 }
 
 
-function formatPublishedTime(
+function formatRefreshTime(
   value
 ) {
   if (!value) {
