@@ -1898,8 +1898,9 @@
               "style": "client"
             },
             {
-              "text": "Gretchen R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -2239,6 +2240,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-27T15:58:28Z",
-  "publishedAt": "2026-08-27T15:59:45.237667+00:00"
+  "sourceLastModified": "2026-08-27T17:39:12Z",
+  "publishedAt": "2026-08-27T21:04:03.933805+00:00"
 }
