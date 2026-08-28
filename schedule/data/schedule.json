@@ -9,14 +9,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        12.375,
-        11.02734375
+        12.3984375,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -572,14 +572,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -817,9 +817,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -898,9 +897,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "Jenn McD",
@@ -1153,14 +1151,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -1384,9 +1382,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "Jenn McD",
@@ -1466,9 +1463,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "Charlotte W",
@@ -1642,14 +1638,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -2238,6 +2234,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-28T00:59:12Z",
-  "publishedAt": "2026-08-28T05:31:50.799133+00:00"
+  "sourceLastModified": "2026-08-28T16:25:41Z",
+  "publishedAt": "2026-08-28T16:59:36.906486+00:00"
 }
