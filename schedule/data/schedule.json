@@ -3,569 +3,6 @@
   "weeks": [
     {
       "key": "Web_ThisWeek",
-      "sourceName": "AugWk4",
-      "sourceSheet": "Aug",
-      "sourceRange": "A50:H64",
-      "rowCount": 15,
-      "columnCount": 8,
-      "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
-        13.0,
-        13.0,
-        13.0,
-        12.3984375,
-        11.0
-      ],
-      "rowHeights": [
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5,
-        22.5
-      ],
-      "rows": [
-        {
-          "tone": "neutral",
-          "cells": [
-            {
-              "text": "",
-              "style": "column-header"
-            },
-            {
-              "text": "",
-              "style": "column-header"
-            },
-            {
-              "text": "Reformer",
-              "style": "column-header",
-              "bold": true
-            },
-            {
-              "text": "Reformer",
-              "style": "column-header",
-              "bold": true
-            },
-            {
-              "text": "Reformer",
-              "style": "column-header",
-              "bold": true
-            },
-            {
-              "text": "Reformer",
-              "style": "column-header",
-              "bold": true
-            },
-            {
-              "text": "CCB",
-              "style": "column-header",
-              "bold": true
-            },
-            {
-              "text": "Instructor",
-              "style": "column-header",
-              "bold": true
-            }
-          ]
-        },
-        {
-          "tone": "green",
-          "cells": [
-            {
-              "text": "Mon Aug 24",
-              "style": "day",
-              "bold": true
-            },
-            {
-              "text": "8:00am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Jeff S",
-              "style": "client"
-            },
-            {
-              "text": "Kathy R",
-              "style": "client"
-            },
-            {
-              "text": "Jenn McD",
-              "style": "client"
-            },
-            {
-              "text": "Lu A",
-              "style": "client"
-            },
-            {
-              "text": "Amy H",
-              "style": "client"
-            },
-            {
-              "text": "Julie",
-              "style": "instructor",
-              "rowspan": 3
-            }
-          ]
-        },
-        {
-          "tone": "green",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "9:30am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Maureen M",
-              "style": "client"
-            },
-            {
-              "text": "Maggie O",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            }
-          ]
-        },
-        {
-          "tone": "green",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "11:00am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Jan F",
-              "style": "client"
-            },
-            {
-              "text": "Becky G",
-              "style": "client"
-            },
-            {
-              "text": "Kristin S",
-              "style": "client"
-            },
-            {
-              "text": "Lisa T",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            }
-          ]
-        },
-        {
-          "tone": "blue",
-          "cells": [
-            {
-              "text": "Tue Aug 25",
-              "style": "day",
-              "bold": true
-            },
-            {
-              "text": "8:00am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Charlotte W",
-              "style": "client"
-            },
-            {
-              "text": "Ricky R",
-              "style": "client"
-            },
-            {
-              "text": "Kristin J",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "Helen K",
-              "style": "client"
-            },
-            {
-              "text": "Julie",
-              "style": "instructor",
-              "rowspan": 2
-            }
-          ]
-        },
-        {
-          "tone": "blue",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "9:30am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "NO CLASS",
-              "style": "no-class",
-              "colspan": 5
-            }
-          ]
-        },
-        {
-          "tone": "blue",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "5:15pm",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Kara R",
-              "style": "client"
-            },
-            {
-              "text": "Jacky S",
-              "style": "client"
-            },
-            {
-              "text": "Jeannie M",
-              "style": "client"
-            },
-            {
-              "text": "Natasha R",
-              "style": "client"
-            },
-            {
-              "text": "",
-              "style": "unavailable"
-            },
-            {
-              "text": "LeAnne",
-              "style": "instructor"
-            }
-          ]
-        },
-        {
-          "tone": "green",
-          "cells": [
-            {
-              "text": "Wed  Aug 26",
-              "style": "day",
-              "bold": true
-            },
-            {
-              "text": "8:00am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Molly G",
-              "style": "client"
-            },
-            {
-              "text": "Amy H",
-              "style": "client"
-            },
-            {
-              "text": "Heather S",
-              "style": "client"
-            },
-            {
-              "text": "Becky M",
-              "style": "client"
-            },
-            {
-              "text": "Jenn McD",
-              "style": "client"
-            },
-            {
-              "text": "Court",
-              "style": "instructor"
-            }
-          ]
-        },
-        {
-          "tone": "green",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "5:15pm",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "NO CLASS",
-              "style": "no-class",
-              "colspan": 5
-            },
-            {
-              "text": "LeAnne",
-              "style": "instructor"
-            }
-          ]
-        },
-        {
-          "tone": "blue",
-          "cells": [
-            {
-              "text": "Thu Aug 27",
-              "style": "day",
-              "bold": true
-            },
-            {
-              "text": "8:00am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Gretchen R",
-              "style": "client"
-            },
-            {
-              "text": "Kathy R",
-              "style": "client"
-            },
-            {
-              "text": "Ricky R",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "Charlotte W",
-              "style": "client"
-            },
-            {
-              "text": "Julie",
-              "style": "instructor",
-              "rowspan": 4
-            }
-          ]
-        },
-        {
-          "tone": "blue",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "9:30am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Nicola C",
-              "style": "client"
-            },
-            {
-              "text": "Betsy C",
-              "style": "client"
-            },
-            {
-              "text": "Maureen M",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "Lisa T",
-              "style": "client"
-            }
-          ]
-        },
-        {
-          "tone": "blue",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "11:00am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Angie P",
-              "style": "client"
-            },
-            {
-              "text": "Hailee J",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "Jan F",
-              "style": "client"
-            }
-          ]
-        },
-        {
-          "tone": "blue",
-          "cells": [
-            {
-              "text": "",
-              "style": "day"
-            },
-            {
-              "text": "12:30pm",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "Jen McL",
-              "style": "client"
-            },
-            {
-              "text": "Gail M",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            }
-          ]
-        },
-        {
-          "tone": "green",
-          "cells": [
-            {
-              "text": "Fri  Aug 28",
-              "style": "day",
-              "bold": true
-            },
-            {
-              "text": "8:00am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "MAT: Jaime I, Jacque M, Maureen M, Becky M, Jen McL?",
-              "style": "mat",
-              "colspan": 5
-            },
-            {
-              "text": "Julie",
-              "style": "instructor",
-              "rowspan": 2
-            }
-          ]
-        },
-        {
-          "tone": "green",
-          "cells": [
-            {
-              "text": "",
-              "style": "day",
-              "bold": true
-            },
-            {
-              "text": "9:30am",
-              "style": "time",
-              "bold": true
-            },
-            {
-              "text": "June H",
-              "style": "client"
-            },
-            {
-              "text": "Maggie O",
-              "style": "client"
-            },
-            {
-              "text": "Deborah C",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "Web_NextWeek",
       "sourceName": "SepWk1",
       "sourceSheet": "Sep",
       "sourceRange": "A2:H16",
@@ -1144,7 +581,7 @@
       ]
     },
     {
-      "key": "Web_WeekPlus2",
+      "key": "Web_NextWeek",
       "sourceName": "SepWk2",
       "sourceSheet": "Sep",
       "sourceRange": "A18:H32",
@@ -1631,7 +1068,7 @@
       ]
     },
     {
-      "key": "Web_WeekPlus3",
+      "key": "Web_WeekPlus2",
       "sourceName": "SepWk3",
       "sourceSheet": "Sep",
       "sourceRange": "A34:H48",
@@ -2232,8 +1669,613 @@
           ]
         }
       ]
+    },
+    {
+      "key": "Web_WeekPlus3",
+      "sourceName": "SepWk4",
+      "sourceSheet": "Sep",
+      "sourceRange": "A50:H64",
+      "rowCount": 15,
+      "columnCount": 8,
+      "columnWidths": [
+        13.46484375,
+        9.9296875,
+        13.06640625,
+        13.0,
+        13.0,
+        13.0,
+        11.73046875,
+        11.0
+      ],
+      "rowHeights": [
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5
+      ],
+      "rows": [
+        {
+          "tone": "neutral",
+          "cells": [
+            {
+              "text": "",
+              "style": "column-header"
+            },
+            {
+              "text": "",
+              "style": "column-header"
+            },
+            {
+              "text": "Reformer",
+              "style": "column-header",
+              "bold": true
+            },
+            {
+              "text": "Reformer",
+              "style": "column-header",
+              "bold": true
+            },
+            {
+              "text": "Reformer",
+              "style": "column-header",
+              "bold": true
+            },
+            {
+              "text": "Reformer",
+              "style": "column-header",
+              "bold": true
+            },
+            {
+              "text": "CCB",
+              "style": "column-header",
+              "bold": true
+            },
+            {
+              "text": "Instructor",
+              "style": "column-header",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "tone": "green",
+          "cells": [
+            {
+              "text": "Mon Sep 21",
+              "style": "day",
+              "bold": true
+            },
+            {
+              "text": "8:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Jeff S",
+              "style": "client"
+            },
+            {
+              "text": "Kathy R",
+              "style": "client"
+            },
+            {
+              "text": "Lu A",
+              "style": "client"
+            },
+            {
+              "text": "Tracey S",
+              "style": "client"
+            },
+            {
+              "text": "Amy H",
+              "style": "client"
+            },
+            {
+              "text": "Julie",
+              "style": "instructor",
+              "rowspan": 3
+            }
+          ]
+        },
+        {
+          "tone": "green",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "9:30am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Patti R",
+              "style": "client"
+            },
+            {
+              "text": "Lisa T",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "tone": "green",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "11:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Jan F",
+              "style": "client"
+            },
+            {
+              "text": "Becky G",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "Tue Sep 22",
+              "style": "day",
+              "bold": true
+            },
+            {
+              "text": "8:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Ricky R",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "Helen K",
+              "style": "client"
+            },
+            {
+              "text": "Julie",
+              "style": "instructor",
+              "rowspan": 2
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "9:30am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Phil M",
+              "style": "client"
+            },
+            {
+              "text": "Carol M",
+              "style": "client"
+            },
+            {
+              "text": "Deborah C",
+              "style": "client"
+            },
+            {
+              "text": "Betsy C",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "5:15pm",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Jackie S",
+              "style": "client"
+            },
+            {
+              "text": "Kara R",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "",
+              "style": "unavailable"
+            },
+            {
+              "text": "LeAnne",
+              "style": "instructor"
+            }
+          ]
+        },
+        {
+          "tone": "green",
+          "cells": [
+            {
+              "text": "Wed  Sep 23",
+              "style": "day",
+              "bold": true
+            },
+            {
+              "text": "8:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Molly G",
+              "style": "client"
+            },
+            {
+              "text": "Amy H",
+              "style": "client"
+            },
+            {
+              "text": "Heather S",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "Jenn McD",
+              "style": "client"
+            },
+            {
+              "text": "Court",
+              "style": "instructor"
+            }
+          ]
+        },
+        {
+          "tone": "green",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "5:15pm",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "",
+              "style": "unavailable"
+            },
+            {
+              "text": "LeAnne",
+              "style": "instructor"
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "Thu Sep 24",
+              "style": "day",
+              "bold": true
+            },
+            {
+              "text": "8:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Gretchen R",
+              "style": "client"
+            },
+            {
+              "text": "Kathy R",
+              "style": "client"
+            },
+            {
+              "text": "Ricky R",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "Julie",
+              "style": "instructor",
+              "rowspan": 4
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "9:30am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Phil M",
+              "style": "client"
+            },
+            {
+              "text": "Carol M",
+              "style": "client"
+            },
+            {
+              "text": "Patti R",
+              "style": "client"
+            },
+            {
+              "text": "Nicola C",
+              "style": "client"
+            },
+            {
+              "text": "Lisa T",
+              "style": "client"
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "11:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Angie P",
+              "style": "client"
+            },
+            {
+              "text": "Hailee J",
+              "style": "client"
+            },
+            {
+              "text": "Vikki W",
+              "style": "client"
+            },
+            {
+              "text": "Linda I",
+              "style": "client"
+            },
+            {
+              "text": "Jan F",
+              "style": "client"
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "12:30pm",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Robin G",
+              "style": "client"
+            },
+            {
+              "text": "Gail M",
+              "style": "client"
+            },
+            {
+              "text": "LeAnne W",
+              "style": "client"
+            },
+            {
+              "text": "Whitney W",
+              "style": "client"
+            },
+            {
+              "text": "Jen McL",
+              "style": "client"
+            }
+          ]
+        },
+        {
+          "tone": "green",
+          "cells": [
+            {
+              "text": "Fri  Sep 25",
+              "style": "day",
+              "bold": true
+            },
+            {
+              "text": "8:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "MAT: Jaime I, Jacque M",
+              "style": "mat",
+              "colspan": 5
+            },
+            {
+              "text": "Julie",
+              "style": "instructor"
+            }
+          ]
+        },
+        {
+          "tone": "green",
+          "cells": [
+            {
+              "text": "",
+              "style": "day",
+              "bold": true
+            },
+            {
+              "text": "9:30am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "Deborah C",
+              "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "Julie",
+              "style": "instructor"
+            }
+          ]
+        }
+      ]
     }
   ],
-  "sourceLastModified": "2026-08-28T16:25:41Z",
-  "publishedAt": "2026-08-28T16:59:36.906486+00:00"
+  "sourceLastModified": "2026-08-28T19:46:57Z",
+  "publishedAt": "2026-08-28T19:47:51.168086+00:00"
 }
