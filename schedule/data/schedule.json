@@ -9,14 +9,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        12.3984375,
-        11.0
+        12.375,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -514,7 +514,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Jacque M, Maureen M, Becky M",
+              "text": "MAT: Jaime I, Jacque M, Maureen M, Becky M, Jen McL?",
               "style": "mat",
               "colspan": 5
             },
@@ -572,14 +572,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        11.73046875,
-        11.0
+        11.703125,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -781,9 +781,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Tracey S",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1154,14 +1153,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        11.73046875,
-        11.0
+        11.703125,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -1643,14 +1642,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        11.73046875,
-        11.0
+        11.703125,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -1849,9 +1848,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Tracey S",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2240,6 +2238,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-27T17:39:12Z",
-  "publishedAt": "2026-08-27T21:04:03.933805+00:00"
+  "sourceLastModified": "2026-08-28T00:59:12Z",
+  "publishedAt": "2026-08-28T05:31:50.799133+00:00"
 }
