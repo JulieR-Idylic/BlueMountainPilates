@@ -255,8 +255,9 @@
               "style": "client"
             },
             {
-              "text": "Becky M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -519,8 +520,9 @@
               "style": "client"
             },
             {
-              "text": "LeAnne W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1005,8 +1007,9 @@
               "style": "client"
             },
             {
-              "text": "LeAnne W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Deborah C",
@@ -1589,8 +1592,9 @@
               "style": "client"
             },
             {
-              "text": "LeAnne W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Robin G",
@@ -1810,9 +1814,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2194,8 +2197,9 @@
               "style": "client"
             },
             {
-              "text": "LeAnne W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Whitney W",
@@ -2221,7 +2225,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Jacque M",
+              "text": "MAT: Jaime I, Jacque M, Maureen M",
               "style": "mat",
               "colspan": 5
             },
@@ -2277,6 +2281,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-30T15:57:48Z",
-  "publishedAt": "2026-08-30T18:49:08.617339+00:00"
+  "sourceLastModified": "2026-08-30T21:08:40Z",
+  "publishedAt": "2026-08-30T21:09:15.479653+00:00"
 }
