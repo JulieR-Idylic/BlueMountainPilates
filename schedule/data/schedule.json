@@ -134,7 +134,7 @@
               "bold": true
             },
             {
-              "text": "Patti R",
+              "text": "Maggie O",
               "style": "client"
             },
             {
@@ -150,9 +150,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Patti R",
+              "style": "client"
             }
           ]
         },
@@ -512,9 +511,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "Gail M",
@@ -1008,9 +1006,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "Deborah C",
@@ -1216,9 +1213,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1487,9 +1483,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Moira C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1592,9 +1587,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "Robin G",
@@ -1818,9 +1812,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2091,9 +2084,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Moira C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2196,9 +2188,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "Whitney W",
@@ -2280,6 +2271,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-31T02:12:14Z",
-  "publishedAt": "2026-08-31T02:54:57.339899+00:00"
+  "sourceLastModified": "2026-08-31T17:36:33Z",
+  "publishedAt": "2026-08-31T18:02:41.673940+00:00"
 }
