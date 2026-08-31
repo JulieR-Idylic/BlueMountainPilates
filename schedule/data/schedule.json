@@ -222,9 +222,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gretchen R",
+              "style": "client"
             },
             {
               "text": "Julie",
@@ -2271,6 +2270,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-31T17:36:33Z",
-  "publishedAt": "2026-08-31T18:02:41.673940+00:00"
+  "sourceLastModified": "2026-08-31T19:44:39Z",
+  "publishedAt": "2026-08-31T19:56:15.363907+00:00"
 }
