@@ -288,12 +288,13 @@
               "style": "client"
             },
             {
-              "text": "Kara R",
+              "text": "Natasha R",
               "style": "client"
             },
             {
-              "text": "Natasha R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -366,9 +367,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kara R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -775,12 +775,13 @@
               "style": "client"
             },
             {
-              "text": "Kara R",
+              "text": "Natasha R",
               "style": "client"
             },
             {
-              "text": "Natasha R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -849,9 +850,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kara R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1357,12 +1357,13 @@
               "style": "client"
             },
             {
-              "text": "Kara R",
+              "text": "Natasha R",
               "style": "client"
             },
             {
-              "text": "Natasha R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1432,9 +1433,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kara R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1961,12 +1961,13 @@
               "style": "client"
             },
             {
-              "text": "Kara R",
+              "text": "Natasha R",
               "style": "client"
             },
             {
-              "text": "Natasha R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2036,9 +2037,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kara R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2280,6 +2280,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-08-31T00:44:32Z",
-  "publishedAt": "2026-08-31T01:40:11.900206+00:00"
+  "sourceLastModified": "2026-08-31T02:12:14Z",
+  "publishedAt": "2026-08-31T02:54:57.339899+00:00"
 }
