@@ -9,14 +9,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -481,17 +481,18 @@
               "style": "client"
             },
             {
+              "text": "Vikki W",
+              "style": "client"
+            },
+            {
               "text": "OPEN",
               "style": "open",
               "bold": true
             },
             {
-              "text": "Vikki W",
-              "style": "client"
-            },
-            {
-              "text": "Kristin S",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Jan F",
@@ -520,14 +521,12 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kristin S",
+              "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Monica C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -591,14 +590,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -1078,14 +1077,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -1679,14 +1678,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -2273,6 +2272,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-02T14:25:19Z",
-  "publishedAt": "2026-09-02T15:09:50.363041+00:00"
+  "sourceLastModified": "2026-09-03T01:00:31Z",
+  "publishedAt": "2026-09-03T01:24:46.308114+00:00"
 }
