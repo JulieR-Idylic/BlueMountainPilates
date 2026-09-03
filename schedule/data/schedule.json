@@ -1924,8 +1924,9 @@
               "style": "client"
             },
             {
-              "text": "Deborah C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Betsy C",
@@ -2240,8 +2241,9 @@
               "bold": true
             },
             {
-              "text": "Deborah C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2272,6 +2274,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-03T01:00:31Z",
-  "publishedAt": "2026-09-03T01:24:46.308114+00:00"
+  "sourceLastModified": "2026-09-03T17:39:33Z",
+  "publishedAt": "2026-09-03T18:50:43.265415+00:00"
 }
