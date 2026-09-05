@@ -2248,8 +2248,8 @@
               "bold": true
             },
             {
-              "text": "MAT CLASS",
-              "style": "client",
+              "text": "MAT: Jaime I, Jacque M",
+              "style": "mat",
               "colspan": 5
             },
             {
@@ -2301,6 +2301,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-05T19:32:02Z",
-  "publishedAt": "2026-09-05T19:32:36.147128+00:00"
+  "sourceLastModified": "2026-09-05T19:40:19Z",
+  "publishedAt": "2026-09-05T20:43:28.298226+00:00"
 }
