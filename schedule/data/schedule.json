@@ -321,8 +321,9 @@
               "style": "client"
             },
             {
-              "text": "Becky M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Charlotte W",
@@ -2295,6 +2296,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-07T02:18:52Z",
-  "publishedAt": "2026-09-07T02:19:27.987643+00:00"
+  "sourceLastModified": "2026-09-07T02:23:12Z",
+  "publishedAt": "2026-09-07T05:11:32.887217+00:00"
 }
