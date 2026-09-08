@@ -271,8 +271,9 @@
               "style": "client"
             },
             {
-              "text": "Moira C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -320,9 +321,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Moira C",
+              "style": "client"
             },
             {
               "text": "Charlotte W",
@@ -2295,6 +2295,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-08T16:06:39Z",
-  "publishedAt": "2026-09-08T15:41:06.202136+00:00"
+  "sourceLastModified": "2026-09-08T21:26:38Z",
+  "publishedAt": "2026-09-08T21:37:51.384661+00:00"
 }
