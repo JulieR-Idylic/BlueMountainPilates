@@ -417,8 +417,9 @@
               "bold": true
             },
             {
-              "text": "Jen McL",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Gail M",
@@ -965,9 +966,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Morgan D",
+              "style": "client"
             },
             {
               "text": "Hailee J",
@@ -2295,6 +2295,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-09T16:36:24Z",
-  "publishedAt": "2026-09-09T18:49:47.126411+00:00"
+  "sourceLastModified": "2026-09-09T19:34:43Z",
+  "publishedAt": "2026-09-09T21:01:23.756555+00:00"
 }
