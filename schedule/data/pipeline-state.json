@@ -1,8 +1,8 @@
 {
-  "status": "healthy",
-  "errorLevel": null,
-  "errorCode": null,
-  "firstDetected": null,
-  "lastDetected": "2026-08-25T17:55:00.308920+00:00",
+  "status": "failed",
+  "errorLevel": 2,
+  "errorCode": "SCHEDULE_ANOMALY",
+  "firstDetected": "2026-09-11T14:02:26.073579+00:00",
+  "lastDetected": "2026-09-11T14:02:26.073579+00:00",
   "lastNotified": null
 }
