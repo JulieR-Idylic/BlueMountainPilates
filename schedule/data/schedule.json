@@ -137,9 +137,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Katie C",
+              "style": "client"
             },
             {
               "text": "Maureen M",
@@ -2398,6 +2397,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-13T15:55:55Z",
-  "publishedAt": "2026-09-13T15:56:28.539525+00:00"
+  "sourceLastModified": "2026-09-13T18:17:10Z",
+  "publishedAt": "2026-09-13T18:17:48.714820+00:00"
 }
