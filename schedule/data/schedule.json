@@ -333,9 +333,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "Jenn McD",
@@ -2401,6 +2400,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-13T14:47:32Z",
-  "publishedAt": "2026-09-13T14:57:31.266830+00:00"
+  "sourceLastModified": "2026-09-13T15:51:50Z",
+  "publishedAt": "2026-09-13T15:53:19.321391+00:00"
 }
