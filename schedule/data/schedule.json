@@ -336,8 +336,9 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Court",
@@ -2397,6 +2398,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-13T18:17:10Z",
-  "publishedAt": "2026-09-13T18:17:48.714820+00:00"
+  "sourceLastModified": "2026-09-13T21:55:25Z",
+  "publishedAt": "2026-09-13T21:55:58.243198+00:00"
 }
