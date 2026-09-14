@@ -172,16 +172,17 @@
               "style": "client"
             },
             {
-              "text": "Becky G",
-              "style": "client"
-            },
-            {
               "text": "Kristin S",
               "style": "client"
             },
             {
               "text": "Lisa T",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -204,16 +205,17 @@
               "bold": true
             },
             {
-              "text": "Charlotte W",
-              "style": "client"
-            },
-            {
               "text": "Ricky R",
               "style": "client"
             },
             {
               "text": "Kristin J",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -332,8 +334,9 @@
               "style": "client"
             },
             {
-              "text": "Becky M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -936,8 +939,9 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Court",
@@ -1004,8 +1008,9 @@
               "style": "client"
             },
             {
-              "text": "Kathy R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Ricky R",
@@ -1302,8 +1307,9 @@
               "style": "client"
             },
             {
-              "text": "Lu A",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Amy H",
@@ -1529,8 +1535,9 @@
               "style": "client"
             },
             {
-              "text": "Becky M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2398,6 +2405,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-14T01:48:22Z",
-  "publishedAt": "2026-09-14T05:17:21.523011+00:00"
+  "sourceLastModified": "2026-09-14T16:19:52Z",
+  "publishedAt": "2026-09-14T16:59:18.214185+00:00"
 }
