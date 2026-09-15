@@ -1574,9 +1574,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Linda I",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2177,9 +2176,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Linda I",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2414,6 +2412,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-15T17:35:50Z",
-  "publishedAt": "2026-09-15T19:23:32.979072+00:00"
+  "sourceLastModified": "2026-09-15T22:02:47Z",
+  "publishedAt": "2026-09-15T22:23:07.205732+00:00"
 }
