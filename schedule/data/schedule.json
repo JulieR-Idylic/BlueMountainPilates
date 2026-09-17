@@ -552,7 +552,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Jacque M, Katie C",
+              "text": "MAT: Katie C",
               "style": "mat",
               "colspan": 5
             },
@@ -741,17 +741,17 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
               "text": "Maureen M",
               "style": "client"
             },
             {
               "text": "Maggie O",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -860,13 +860,13 @@
               "style": "client"
             },
             {
+              "text": "Betsy C",
+              "style": "client"
+            },
+            {
               "text": "OPEN",
               "style": "open",
               "bold": true
-            },
-            {
-              "text": "Betsy C",
-              "style": "client"
             },
             {
               "text": "OPEN",
@@ -945,9 +945,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gretchen R",
+              "style": "client"
             },
             {
               "text": "Court",
@@ -972,9 +971,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Hailee J",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1014,17 +1012,17 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
               "text": "Ricky R",
               "style": "client"
             },
             {
               "text": "Moira C",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1090,12 +1088,14 @@
               "style": "client"
             },
             {
-              "text": "Hailee J",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
-              "text": "Vikki W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1347,17 +1347,17 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
               "text": "Maggie O",
               "style": "client"
             },
             {
               "text": "Moira C",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2414,6 +2414,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-17T14:59:39Z",
-  "publishedAt": "2026-09-17T15:34:57.001944+00:00"
+  "sourceLastModified": "2026-09-17T19:19:50Z",
+  "publishedAt": "2026-09-17T19:25:08.377289+00:00"
 }
