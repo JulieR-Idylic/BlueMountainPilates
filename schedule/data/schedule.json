@@ -362,28 +362,9 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "",
-              "style": "unavailable"
+              "text": "NO CLASS",
+              "style": "no-class",
+              "colspan": 5
             },
             {
               "text": "LeAnne",
@@ -1061,8 +1042,9 @@
               "style": "client"
             },
             {
-              "text": "Nicola C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2413,6 +2395,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-17T20:53:15Z",
-  "publishedAt": "2026-09-17T22:18:35.385633+00:00"
+  "sourceLastModified": "2026-09-17T22:58:23Z",
+  "publishedAt": "2026-09-18T00:26:24.568716+00:00"
 }
