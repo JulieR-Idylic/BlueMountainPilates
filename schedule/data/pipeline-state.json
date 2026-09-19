@@ -1,8 +1,8 @@
 {
-  "status": "healthy",
-  "errorLevel": null,
-  "errorCode": null,
-  "firstDetected": null,
-  "lastDetected": "2026-09-11T14:05:06.603009+00:00",
+  "status": "failed",
+  "errorLevel": 1,
+  "errorCode": "WORKBOOK_DOWNLOAD",
+  "firstDetected": "2026-09-19T03:03:19.856848+00:00",
+  "lastDetected": "2026-09-19T03:03:19.856848+00:00",
   "lastNotified": null
 }
