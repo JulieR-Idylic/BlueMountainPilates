@@ -146,9 +146,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Katie C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -754,9 +753,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2416,6 +2414,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-20T16:04:00Z",
-  "publishedAt": "2026-09-20T16:04:24.238354+00:00"
+  "sourceLastModified": "2026-09-20T16:32:51Z",
+  "publishedAt": "2026-09-20T18:10:59.219751+00:00"
 }
