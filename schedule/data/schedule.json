@@ -110,8 +110,9 @@
               "bold": true
             },
             {
-              "text": "Amy H",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -2415,6 +2416,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-20T15:56:13Z",
-  "publishedAt": "2026-09-20T15:55:43.766326+00:00"
+  "sourceLastModified": "2026-09-20T16:04:00Z",
+  "publishedAt": "2026-09-20T16:04:24.238354+00:00"
 }
