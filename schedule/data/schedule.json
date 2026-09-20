@@ -866,8 +866,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1354,9 +1355,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1954,9 +1954,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2414,6 +2413,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-20T16:32:51Z",
-  "publishedAt": "2026-09-20T18:10:59.219751+00:00"
+  "sourceLastModified": "2026-09-20T20:55:45Z",
+  "publishedAt": "2026-09-20T20:58:06.377833+00:00"
 }
