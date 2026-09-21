@@ -416,9 +416,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Angie P",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -481,8 +480,9 @@
               "bold": true
             },
             {
-              "text": "Angie P",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2413,6 +2413,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-21T00:44:07Z",
-  "publishedAt": "2026-09-21T05:23:35.778941+00:00"
+  "sourceLastModified": "2026-09-21T16:07:59Z",
+  "publishedAt": "2026-09-21T17:07:24.554400+00:00"
 }
