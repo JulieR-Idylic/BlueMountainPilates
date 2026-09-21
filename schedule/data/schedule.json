@@ -480,9 +480,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kristin S",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -553,7 +552,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Jacque M, Maureen M",
+              "text": "MAT: Jaime I, Jacque M, Maureen M, Patti R",
               "style": "mat",
               "colspan": 5
             },
@@ -577,28 +576,10 @@
               "bold": true
             },
             {
-              "text": "Kristin S",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "NO CLASS",
+              "style": "no-class",
+              "bold": true,
+              "colspan": 5
             },
             {
               "text": "Julie",
@@ -1386,9 +1367,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky G",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1981,9 +1961,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky G",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2413,6 +2392,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-21T16:07:59Z",
-  "publishedAt": "2026-09-21T17:07:24.554400+00:00"
+  "sourceLastModified": "2026-09-21T19:03:21Z",
+  "publishedAt": "2026-09-21T21:10:26.087738+00:00"
 }
