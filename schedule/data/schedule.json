@@ -214,9 +214,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -941,16 +940,15 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "Jenn McD",
               "style": "client"
             },
             {
-              "text": "Julie",
+              "text": "Court",
               "style": "instructor"
             }
           ]
@@ -1155,7 +1153,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Maureen M",
+              "text": "MAT: Jaime I, Maureen M, Becky M",
               "style": "mat",
               "colspan": 5
             },
@@ -1540,16 +1538,15 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "Jenn McD",
               "style": "client"
             },
             {
-              "text": "Julie",
+              "text": "Court",
               "style": "instructor"
             }
           ]
@@ -1755,7 +1752,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I",
+              "text": "MAT: Jaime I, Becky M",
               "style": "mat",
               "colspan": 5
             },
@@ -2142,16 +2139,15 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "Jenn McD",
               "style": "client"
             },
             {
-              "text": "Julie",
+              "text": "Court",
               "style": "instructor"
             }
           ]
@@ -2409,6 +2405,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-26T18:17:13Z",
-  "publishedAt": "2026-09-25T20:00:38.658841+00:00"
+  "sourceLastModified": "2026-09-26T20:17:51Z",
+  "publishedAt": "2026-09-26T21:32:58.848351+00:00"
 }
