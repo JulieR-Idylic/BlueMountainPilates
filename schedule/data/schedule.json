@@ -1094,9 +1094,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "Jan F",
@@ -1125,12 +1124,13 @@
               "style": "client"
             },
             {
-              "text": "LeAnne W",
+              "text": "Robin G",
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1692,9 +1692,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "Jan F",
@@ -1723,12 +1722,13 @@
               "style": "client"
             },
             {
-              "text": "LeAnne W",
+              "text": "Robin G",
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1942,8 +1942,9 @@
               "style": "client"
             },
             {
-              "text": "Maggie O",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2167,8 +2168,9 @@
               "style": "client"
             },
             {
-              "text": "Linda I",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2322,12 +2324,13 @@
               "style": "client"
             },
             {
-              "text": "LeAnne W",
+              "text": "Robin G",
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2383,9 +2386,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2402,6 +2404,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-27T19:02:07Z",
-  "publishedAt": "2026-09-27T19:43:42.708818+00:00"
+  "sourceLastModified": "2026-09-27T22:34:26Z",
+  "publishedAt": "2026-09-27T22:34:49.154224+00:00"
 }
