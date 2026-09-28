@@ -342,9 +342,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gretchen R",
+              "style": "client"
             },
             {
               "text": "Court",
@@ -1339,8 +1338,9 @@
               "style": "client"
             },
             {
-              "text": "Moira C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Betsy C",
@@ -1492,9 +1492,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Moira C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2403,6 +2402,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-28T17:57:29Z",
-  "publishedAt": "2026-09-28T18:39:07.701299+00:00"
+  "sourceLastModified": "2026-09-28T20:36:37Z",
+  "publishedAt": "2026-09-28T21:10:03.241989+00:00"
 }
