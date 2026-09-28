@@ -251,12 +251,13 @@
               "style": "client"
             },
             {
-              "text": "Carol M",
+              "text": "Deborah C",
               "style": "client"
             },
             {
-              "text": "Deborah C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1310,8 +1311,9 @@
               "style": "client"
             },
             {
-              "text": "Amy H",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -2401,6 +2403,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-09-28T02:06:03Z",
-  "publishedAt": "2026-09-28T06:46:17.019897+00:00"
+  "sourceLastModified": "2026-09-28T17:57:29Z",
+  "publishedAt": "2026-09-28T18:39:07.701299+00:00"
 }
