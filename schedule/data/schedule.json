@@ -410,8 +410,9 @@
               "style": "client"
             },
             {
-              "text": "Kathy R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Ricky R",
@@ -702,8 +703,9 @@
               "style": "client"
             },
             {
-              "text": "Kathy R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Jenn McD",
@@ -816,9 +818,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kathy R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2404,6 +2405,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-01T02:29:25Z",
-  "publishedAt": "2026-10-01T00:39:42.252086+00:00"
+  "sourceLastModified": "2026-10-01T16:19:39Z",
+  "publishedAt": "2026-10-01T17:25:44.458304+00:00"
 }
