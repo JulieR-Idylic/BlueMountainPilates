@@ -553,7 +553,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Maureen M",
+              "text": "MAT: Jaime I, Maureen M, Patti R",
               "style": "mat",
               "colspan": 5
             },
@@ -1057,12 +1057,14 @@
               "style": "client"
             },
             {
-              "text": "Carol M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
-              "text": "Phil M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Lisa T",
@@ -1460,12 +1462,14 @@
               "style": "client"
             },
             {
-              "text": "Carol M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
-              "text": "Phil M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1656,12 +1660,14 @@
               "style": "client"
             },
             {
-              "text": "Carol M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
-              "text": "Phil M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Lisa T",
@@ -2405,6 +2411,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-01T16:19:39Z",
-  "publishedAt": "2026-10-01T17:25:44.458304+00:00"
+  "sourceLastModified": "2026-10-01T17:43:42Z",
+  "publishedAt": "2026-10-01T17:44:19.782325+00:00"
 }
