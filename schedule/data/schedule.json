@@ -486,8 +486,9 @@
               "style": "client"
             },
             {
-              "text": "Hailee J",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Vikki W",
@@ -747,8 +748,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Maggie O",
@@ -1057,9 +1059,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1093,8 +1094,9 @@
               "style": "client"
             },
             {
-              "text": "Vikki W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Maggie O",
@@ -1696,8 +1698,9 @@
               "style": "client"
             },
             {
-              "text": "Vikki W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Maggie O",
@@ -2296,8 +2299,9 @@
               "style": "client"
             },
             {
-              "text": "Vikki W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2411,6 +2415,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-01T17:43:42Z",
-  "publishedAt": "2026-10-01T17:44:19.782325+00:00"
+  "sourceLastModified": "2026-10-01T20:59:47Z",
+  "publishedAt": "2026-10-01T22:00:41.816084+00:00"
 }
