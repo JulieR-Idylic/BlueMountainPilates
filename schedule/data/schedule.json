@@ -402,16 +402,17 @@
               "bold": true
             },
             {
-              "text": "Gretchen R",
-              "style": "client"
-            },
-            {
               "text": "Kathy R",
               "style": "client"
             },
             {
               "text": "Ricky R",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1039,8 +1040,9 @@
           "tone": "blue",
           "cells": [
             {
-              "text": "",
-              "style": "day"
+              "text": "JUMPBOARD",
+              "style": "day",
+              "bold": true
             },
             {
               "text": "9:30am",
@@ -1947,9 +1949,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2406,6 +2407,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-04T16:06:29Z",
-  "publishedAt": "2026-10-04T16:06:55.562039+00:00"
+  "sourceLastModified": "2026-10-04T16:59:06Z",
+  "publishedAt": "2026-10-04T19:39:34.609077+00:00"
 }
