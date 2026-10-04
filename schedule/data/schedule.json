@@ -141,12 +141,13 @@
               "style": "client"
             },
             {
-              "text": "Maggie O",
+              "text": "Katie C",
               "style": "client"
             },
             {
-              "text": "Katie C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Patti R",
@@ -184,9 +185,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             }
           ]
         },
@@ -2407,6 +2407,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-04T16:59:06Z",
-  "publishedAt": "2026-10-04T19:39:34.609077+00:00"
+  "sourceLastModified": "2026-10-04T20:35:29Z",
+  "publishedAt": "2026-10-04T22:30:51.948458+00:00"
 }
