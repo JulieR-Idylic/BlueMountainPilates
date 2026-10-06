@@ -212,8 +212,9 @@
               "style": "client"
             },
             {
-              "text": "Kathy R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -411,9 +412,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kristin J",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -462,8 +462,9 @@
               "bold": true
             },
             {
-              "text": "Lisa T",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -586,9 +587,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kathy R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2408,6 +2408,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-06T02:55:37Z",
-  "publishedAt": "2026-10-05T22:48:00.531821+00:00"
+  "sourceLastModified": "2026-10-06T16:15:33Z",
+  "publishedAt": "2026-10-06T17:18:28.553855+00:00"
 }
