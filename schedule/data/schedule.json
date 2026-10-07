@@ -950,7 +950,7 @@
               "style": "client"
             },
             {
-              "text": "Court",
+              "text": "Julie",
               "style": "instructor"
             }
           ]
@@ -991,7 +991,7 @@
               "style": "unavailable"
             },
             {
-              "text": "LeAnne",
+              "text": "",
               "style": "instructor"
             }
           ]
@@ -2409,6 +2409,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-07T00:45:57Z",
-  "publishedAt": "2026-10-07T01:08:52.337296+00:00"
+  "sourceLastModified": "2026-10-07T02:14:16Z",
+  "publishedAt": "2026-10-07T07:11:14.601987+00:00"
 }
