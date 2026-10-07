@@ -323,16 +323,17 @@
               "bold": true
             },
             {
-              "text": "Molly G",
-              "style": "client"
-            },
-            {
               "text": "Amy H",
               "style": "client"
             },
             {
               "text": "Heather S",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -901,9 +902,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jeannie M",
+              "style": "client"
             },
             {
               "text": "",
@@ -929,10 +929,6 @@
               "bold": true
             },
             {
-              "text": "Molly G",
-              "style": "client"
-            },
-            {
               "text": "Amy H",
               "style": "client"
             },
@@ -943,6 +939,11 @@
             {
               "text": "Becky M",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Jenn McD",
@@ -1500,9 +1501,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jeannie M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1533,10 +1533,6 @@
               "bold": true
             },
             {
-              "text": "Molly G",
-              "style": "client"
-            },
-            {
               "text": "Amy H",
               "style": "client"
             },
@@ -1547,6 +1543,11 @@
             {
               "text": "Becky M",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Jenn McD",
@@ -2097,9 +2098,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jeannie M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2130,10 +2130,6 @@
               "bold": true
             },
             {
-              "text": "Molly G",
-              "style": "client"
-            },
-            {
               "text": "Amy H",
               "style": "client"
             },
@@ -2144,6 +2140,11 @@
             {
               "text": "Becky M",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Jenn McD",
@@ -2408,6 +2409,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-06T17:52:29Z",
-  "publishedAt": "2026-10-06T17:18:28.553855+00:00"
+  "sourceLastModified": "2026-10-07T00:45:57Z",
+  "publishedAt": "2026-10-07T01:08:52.337296+00:00"
 }
