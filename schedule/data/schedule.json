@@ -1060,18 +1060,18 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
               "text": "Lisa T",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "JUMPBOARD",
+              "style": "client",
+              "bold": true
             }
           ]
         },
@@ -1096,13 +1096,13 @@
               "style": "client"
             },
             {
+              "text": "Maggie O",
+              "style": "client"
+            },
+            {
               "text": "OPEN",
               "style": "open",
               "bold": true
-            },
-            {
-              "text": "Maggie O",
-              "style": "client"
             },
             {
               "text": "Jan F",
@@ -2409,6 +2409,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-07T22:10:47Z",
-  "publishedAt": "2026-10-07T23:02:05.254327+00:00"
+  "sourceLastModified": "2026-10-08T17:31:34Z",
+  "publishedAt": "2026-10-08T17:55:12.537421+00:00"
 }
