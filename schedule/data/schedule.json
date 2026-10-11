@@ -910,8 +910,8 @@
               "bold": true
             },
             {
-              "text": "",
-              "style": "unavailable"
+              "text": "Helen K",
+              "style": "client"
             },
             {
               "text": "LeAnne",
@@ -990,8 +990,8 @@
               "bold": true
             },
             {
-              "text": "Helen K",
-              "style": "client"
+              "text": "",
+              "style": "unavailable"
             },
             {
               "text": "LeAnne",
@@ -1508,8 +1508,8 @@
               "bold": true
             },
             {
-              "text": "",
-              "style": "unavailable"
+              "text": "Helen K",
+              "style": "client"
             },
             {
               "text": "LeAnne",
@@ -1588,8 +1588,8 @@
               "bold": true
             },
             {
-              "text": "Helen K",
-              "style": "client"
+              "text": "",
+              "style": "unavailable"
             },
             {
               "text": "LeAnne",
@@ -2108,8 +2108,8 @@
               "bold": true
             },
             {
-              "text": "",
-              "style": "unavailable"
+              "text": "Helen K",
+              "style": "client"
             },
             {
               "text": "LeAnne",
@@ -2189,8 +2189,8 @@
               "bold": true
             },
             {
-              "text": "Helen K",
-              "style": "client"
+              "text": "",
+              "style": "unavailable"
             },
             {
               "text": "LeAnne",
@@ -2412,6 +2412,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-11T16:48:13Z",
-  "publishedAt": "2026-10-11T17:02:46.151054+00:00"
+  "sourceLastModified": "2026-10-11T17:23:58Z",
+  "publishedAt": "2026-10-11T17:24:02.235217+00:00"
 }
