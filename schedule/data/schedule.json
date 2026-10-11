@@ -101,12 +101,13 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
+              "text": "Lu A",
               "style": "client"
             },
             {
-              "text": "Lu A",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -227,8 +228,9 @@
               "bold": true
             },
             {
-              "text": "Helen K",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -383,8 +385,8 @@
               "bold": true
             },
             {
-              "text": "",
-              "style": "unavailable"
+              "text": "Helen K",
+              "style": "client"
             },
             {
               "text": "LeAnne",
@@ -831,8 +833,9 @@
               "bold": true
             },
             {
-              "text": "Helen K",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -987,8 +990,8 @@
               "bold": true
             },
             {
-              "text": "",
-              "style": "unavailable"
+              "text": "Helen K",
+              "style": "client"
             },
             {
               "text": "LeAnne",
@@ -1428,8 +1431,9 @@
               "bold": true
             },
             {
-              "text": "Helen K",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -1584,8 +1588,8 @@
               "bold": true
             },
             {
-              "text": "",
-              "style": "unavailable"
+              "text": "Helen K",
+              "style": "client"
             },
             {
               "text": "LeAnne",
@@ -2027,8 +2031,9 @@
               "bold": true
             },
             {
-              "text": "Helen K",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -2184,8 +2189,8 @@
               "bold": true
             },
             {
-              "text": "",
-              "style": "unavailable"
+              "text": "Helen K",
+              "style": "client"
             },
             {
               "text": "LeAnne",
@@ -2407,6 +2412,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-11T16:08:08Z",
-  "publishedAt": "2026-10-11T02:09:38.994120+00:00"
+  "sourceLastModified": "2026-10-11T16:48:13Z",
+  "publishedAt": "2026-10-11T17:02:46.151054+00:00"
 }
