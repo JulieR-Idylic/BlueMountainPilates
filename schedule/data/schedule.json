@@ -105,9 +105,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Lisa T",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -134,27 +133,10 @@
               "bold": true
             },
             {
-              "text": "Lisa T",
-              "style": "client"
-            },
-            {
-              "text": "Maggie O",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "NO CLASS",
+              "style": "no-class",
+              "bold": true,
+              "colspan": 5
             }
           ]
         },
@@ -179,9 +161,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -209,28 +190,10 @@
               "bold": true
             },
             {
-              "text": "Ricky R",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "NO CLASS",
+              "style": "no-class",
+              "bold": true,
+              "colspan": 5
             },
             {
               "text": "Julie",
@@ -1947,9 +1910,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2412,6 +2374,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-11T17:23:58Z",
-  "publishedAt": "2026-10-11T17:24:02.235217+00:00"
+  "sourceLastModified": "2026-10-11T20:02:15Z",
+  "publishedAt": "2026-10-11T20:55:15.412550+00:00"
 }
