@@ -461,9 +461,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Deborah C",
+              "style": "client"
             },
             {
               "text": "Jan F",
@@ -546,28 +545,10 @@
               "bold": true
             },
             {
-              "text": "Deborah C",
-              "style": "client"
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "NO CLASS",
+              "style": "no-class",
+              "bold": true,
+              "colspan": 5
             }
           ]
         }
@@ -2373,6 +2354,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-13T01:20:35Z",
-  "publishedAt": "2026-10-13T02:13:19.572887+00:00"
+  "sourceLastModified": "2026-10-13T17:39:52Z",
+  "publishedAt": "2026-10-13T18:23:52.514650+00:00"
 }
