@@ -748,9 +748,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Laura S",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2374,6 +2373,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-12T17:15:18Z",
-  "publishedAt": "2026-10-11T20:55:15.412550+00:00"
+  "sourceLastModified": "2026-10-13T01:20:35Z",
+  "publishedAt": "2026-10-13T02:13:19.572887+00:00"
 }
