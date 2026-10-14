@@ -692,9 +692,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Katie C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2345,6 +2344,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-14T19:57:05Z",
-  "publishedAt": "2026-10-14T20:06:49.601989+00:00"
+  "sourceLastModified": "2026-10-14T22:00:04Z",
+  "publishedAt": "2026-10-14T23:15:46.169476+00:00"
 }
