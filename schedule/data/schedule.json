@@ -1921,9 +1921,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky G",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2075,9 +2074,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Becky M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2295,7 +2293,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Jacque M, Maureen M",
+              "text": "MAT: Jaime I, Maureen M",
               "style": "mat",
               "colspan": 5
             },
@@ -2347,6 +2345,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-14T14:53:20Z",
-  "publishedAt": "2026-10-14T15:52:26.878358+00:00"
+  "sourceLastModified": "2026-10-14T19:57:05Z",
+  "publishedAt": "2026-10-14T20:06:49.601989+00:00"
 }
