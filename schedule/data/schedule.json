@@ -696,9 +696,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maggie O",
+              "style": "client"
             },
             {
               "text": "Patti R",
@@ -1009,8 +1008,9 @@
               "style": "client"
             },
             {
-              "text": "Lisa T",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -2344,6 +2344,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-15T14:43:51Z",
-  "publishedAt": "2026-10-15T15:39:11.923263+00:00"
+  "sourceLastModified": "2026-10-15T19:09:41Z",
+  "publishedAt": "2026-10-15T19:44:12.959830+00:00"
 }
