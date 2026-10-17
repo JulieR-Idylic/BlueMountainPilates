@@ -1710,9 +1710,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Robin G",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2306,9 +2305,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Robin G",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2388,6 +2386,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-16T21:56:23Z",
-  "publishedAt": "2026-10-16T14:06:09.817543+00:00"
+  "sourceLastModified": "2026-10-17T21:33:41Z",
+  "publishedAt": "2026-10-17T21:45:23.830366+00:00"
 }
