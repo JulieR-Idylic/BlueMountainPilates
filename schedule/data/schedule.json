@@ -141,9 +141,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "Maggie O",
@@ -1202,8 +1201,8 @@
       "key": "Web_WeekPlus2",
       "sourceName": "NovWk1",
       "sourceSheet": "Nov",
-      "sourceRange": "A2:H16",
-      "rowCount": 15,
+      "sourceRange": "A2:H17",
+      "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
         13.46484375,
@@ -1216,6 +1215,7 @@
         11.0
       ],
       "rowHeights": [
+        22.5,
         22.5,
         22.5,
         22.5,
@@ -1376,9 +1376,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cecilia R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1460,6 +1459,49 @@
               "text": "OPEN",
               "style": "open",
               "bold": true
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "11:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "",
+              "style": "instructor"
             }
           ]
         },
@@ -1798,8 +1840,8 @@
       "key": "Web_WeekPlus3",
       "sourceName": "NovWk2",
       "sourceSheet": "Nov",
-      "sourceRange": "A18:H32",
-      "rowCount": 15,
+      "sourceRange": "A19:H34",
+      "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
         13.46484375,
@@ -1812,6 +1854,7 @@
         11.0
       ],
       "rowHeights": [
+        22.5,
         22.5,
         22.5,
         22.5,
@@ -1971,9 +2014,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cecilia R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2055,6 +2097,49 @@
               "text": "OPEN",
               "style": "open",
               "bold": true
+            }
+          ]
+        },
+        {
+          "tone": "blue",
+          "cells": [
+            {
+              "text": "",
+              "style": "day"
+            },
+            {
+              "text": "11:00am",
+              "style": "time",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "",
+              "style": "instructor"
             }
           ]
         },
@@ -2338,7 +2423,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I",
+              "text": "MAT: Jaime I, Maureen M",
               "style": "mat",
               "colspan": 5
             },
@@ -2390,6 +2475,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-18T18:14:56Z",
-  "publishedAt": "2026-10-18T18:02:25.941806+00:00"
+  "sourceLastModified": "2026-10-18T22:32:00Z",
+  "publishedAt": "2026-10-18T22:34:00.100769+00:00"
 }
