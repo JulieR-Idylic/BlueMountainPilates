@@ -488,9 +488,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Deborah C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -578,10 +577,6 @@
               "bold": true
             },
             {
-              "text": "Deborah C",
-              "style": "client"
-            },
-            {
               "text": "Kristin S",
               "style": "client"
             },
@@ -592,6 +587,11 @@
             {
               "text": "Maggie O",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2476,6 +2476,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-19T16:24:12Z",
-  "publishedAt": "2026-10-19T17:35:58.464067+00:00"
+  "sourceLastModified": "2026-10-19T17:46:36Z",
+  "publishedAt": "2026-10-19T17:58:33.776927+00:00"
 }
