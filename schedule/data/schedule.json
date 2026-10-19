@@ -261,8 +261,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -527,9 +528,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2476,6 +2476,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-19T17:46:36Z",
-  "publishedAt": "2026-10-19T17:58:33.776927+00:00"
+  "sourceLastModified": "2026-10-19T20:34:55Z",
+  "publishedAt": "2026-10-19T20:35:21.973344+00:00"
 }
