@@ -206,29 +206,9 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "NO CLASS",
+              "style": "no-class",
+              "colspan": 5
             },
             {
               "text": "Julie",
@@ -2477,6 +2457,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-20T17:52:24Z",
-  "publishedAt": "2026-10-20T15:42:03.713279+00:00"
+  "sourceLastModified": "2026-10-20T21:17:07Z",
+  "publishedAt": "2026-10-20T22:55:35.640952+00:00"
 }
