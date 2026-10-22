@@ -1455,9 +1455,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jen McL",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1735,8 +1734,9 @@
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2091,9 +2091,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jen McL",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2372,8 +2371,9 @@
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2452,6 +2452,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-22T17:52:37Z",
-  "publishedAt": "2026-10-22T20:12:01.450871+00:00"
+  "sourceLastModified": "2026-10-22T20:33:39Z",
+  "publishedAt": "2026-10-22T21:16:36.508911+00:00"
 }
