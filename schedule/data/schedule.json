@@ -534,7 +534,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Patti R",
+              "text": "MAT: Jaime I, Patti R, Jen McL",
               "style": "mat",
               "colspan": 5
             },
@@ -1954,15 +1954,15 @@
               "style": "client"
             },
             {
-              "text": "Julie",
-              "style": "client"
-            },
-            {
-              "text": "Julie",
-              "style": "client"
-            },
-            {
               "text": "Patti R",
+              "style": "client"
+            },
+            {
+              "text": "Julie",
+              "style": "client"
+            },
+            {
+              "text": "Julie",
               "style": "client"
             }
           ]
@@ -2452,6 +2452,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-22T20:33:39Z",
-  "publishedAt": "2026-10-22T21:16:36.508911+00:00"
+  "sourceLastModified": "2026-10-22T23:13:52Z",
+  "publishedAt": "2026-10-22T23:24:39.253533+00:00"
 }
