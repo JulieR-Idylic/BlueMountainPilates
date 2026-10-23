@@ -789,8 +789,9 @@
               "style": "client"
             },
             {
-              "text": "Ricky R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Kristin J",
@@ -989,8 +990,9 @@
               "style": "client"
             },
             {
-              "text": "Ricky R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2452,6 +2454,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-23T17:40:14Z",
-  "publishedAt": "2026-10-23T19:55:49.167080+00:00"
+  "sourceLastModified": "2026-10-23T21:56:01Z",
+  "publishedAt": "2026-10-23T22:47:10.202929+00:00"
 }
