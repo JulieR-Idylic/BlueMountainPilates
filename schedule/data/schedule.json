@@ -1819,7 +1819,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Maureen M",
+              "text": "MAT: Jaime I",
               "style": "mat",
               "colspan": 5
             },
@@ -2492,9 +2492,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2506,6 +2505,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-25T18:08:49Z",
-  "publishedAt": "2026-10-25T18:26:13.030878+00:00"
+  "sourceLastModified": "2026-10-25T20:58:13Z",
+  "publishedAt": "2026-10-25T21:01:28.352623+00:00"
 }
