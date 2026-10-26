@@ -205,10 +205,6 @@
               "bold": true
             },
             {
-              "text": "Charlotte W",
-              "style": "client"
-            },
-            {
               "text": "Ricky R",
               "style": "client"
             },
@@ -219,6 +215,11 @@
             {
               "text": "Laura S",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -810,12 +811,13 @@
               "style": "client"
             },
             {
-              "text": "Charlotte W",
+              "text": "Laura S",
               "style": "client"
             },
             {
-              "text": "Laura S",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1446,12 +1448,13 @@
               "style": "client"
             },
             {
-              "text": "Charlotte W",
+              "text": "Laura S",
               "style": "client"
             },
             {
-              "text": "Laura S",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2082,12 +2085,13 @@
               "style": "client"
             },
             {
-              "text": "Charlotte W",
+              "text": "Laura S",
               "style": "client"
             },
             {
-              "text": "Laura S",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2508,6 +2512,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-26T20:44:45Z",
-  "publishedAt": "2026-10-26T22:12:07.994398+00:00"
+  "sourceLastModified": "2026-10-26T22:47:47Z",
+  "publishedAt": "2026-10-26T22:48:14.308491+00:00"
 }
