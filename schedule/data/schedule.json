@@ -9,14 +9,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -324,12 +324,13 @@
               "style": "client"
             },
             {
-              "text": "Heather S",
+              "text": "Becky M",
               "style": "client"
             },
             {
-              "text": "Becky M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -549,7 +550,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Becky M, Patti R",
+              "text": "MAT: Jaime I, Becky M",
               "style": "mat",
               "colspan": 5
             },
@@ -607,14 +608,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -853,8 +854,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1155,9 +1157,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1243,14 +1244,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -1489,8 +1490,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1791,9 +1793,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1879,14 +1880,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -2125,8 +2126,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2427,9 +2429,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2507,6 +2508,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-26T00:42:10Z",
-  "publishedAt": "2026-10-26T01:07:15.378215+00:00"
+  "sourceLastModified": "2026-10-26T16:14:36Z",
+  "publishedAt": "2026-10-26T16:15:04.908082+00:00"
 }
