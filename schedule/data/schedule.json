@@ -2081,8 +2081,9 @@
               "style": "client"
             },
             {
-              "text": "Kristin J",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Laura S",
@@ -2512,6 +2513,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-26T23:07:15Z",
-  "publishedAt": "2026-10-27T01:29:33.005847+00:00"
+  "sourceLastModified": "2026-10-27T16:19:08Z",
+  "publishedAt": "2026-10-27T16:44:31.188354+00:00"
 }
