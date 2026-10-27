@@ -884,9 +884,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jacque M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1521,9 +1520,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jacque M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2159,9 +2157,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jacque M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2513,6 +2510,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-27T16:44:36Z",
-  "publishedAt": "2026-10-27T16:44:31.188354+00:00"
+  "sourceLastModified": "2026-10-27T21:03:53Z",
+  "publishedAt": "2026-10-27T21:13:56.727944+00:00"
 }
