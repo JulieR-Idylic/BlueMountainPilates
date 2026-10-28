@@ -9,14 +9,14 @@
       "rowCount": 15,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        11.73046875,
-        11.0
+        11.703125,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -609,14 +609,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        11.73046875,
-        11.0
+        11.703125,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -852,8 +852,9 @@
               "style": "client"
             },
             {
-              "text": "Deborah C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1054,7 +1055,7 @@
               "style": "client"
             },
             {
-              "text": "Jacque M",
+              "text": "Patti R",
               "style": "client"
             },
             {
@@ -1089,8 +1090,9 @@
               "style": "client"
             },
             {
-              "text": "Patti R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Nicola C",
@@ -1245,14 +1247,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        11.73046875,
-        11.0
+        11.703125,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -1690,7 +1692,7 @@
               "style": "client"
             },
             {
-              "text": "Jacque M",
+              "text": "Patti R",
               "style": "client"
             },
             {
@@ -1725,8 +1727,9 @@
               "style": "client"
             },
             {
-              "text": "Patti R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Nicola C",
@@ -1881,14 +1884,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.46484375,
-        9.9296875,
-        13.06640625,
+        13.44921875,
+        9.953125,
+        13.046875,
         13.0,
         13.0,
         13.0,
-        11.73046875,
-        11.0
+        11.703125,
+        11.02734375
       ],
       "rowHeights": [
         22.5,
@@ -2327,7 +2330,7 @@
               "style": "client"
             },
             {
-              "text": "Jacque M",
+              "text": "Patti R",
               "style": "client"
             },
             {
@@ -2362,8 +2365,9 @@
               "style": "client"
             },
             {
-              "text": "Patti R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Nicola C",
@@ -2510,6 +2514,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-27T21:03:53Z",
-  "publishedAt": "2026-10-27T21:13:56.727944+00:00"
+  "sourceLastModified": "2026-10-28T00:20:54Z",
+  "publishedAt": "2026-10-28T00:31:58.036555+00:00"
 }
