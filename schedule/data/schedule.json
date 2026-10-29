@@ -1737,8 +1737,9 @@
               "style": "client"
             },
             {
-              "text": "Lisa T",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -2009,8 +2010,9 @@
               "bold": true
             },
             {
-              "text": "Lisa T",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Moira C",
@@ -2375,8 +2377,9 @@
               "style": "client"
             },
             {
-              "text": "Lisa T",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -2515,6 +2518,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-29T16:20:56Z",
-  "publishedAt": "2026-10-29T17:28:22.178070+00:00"
+  "sourceLastModified": "2026-10-29T17:33:13Z",
+  "publishedAt": "2026-10-29T17:47:47.494949+00:00"
 }
