@@ -775,12 +775,13 @@
               "style": "client"
             },
             {
-              "text": "Becky G",
+              "text": "Cecilia R",
               "style": "client"
             },
             {
-              "text": "Cecilia R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -852,9 +853,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1090,13 +1090,13 @@
               "style": "client"
             },
             {
+              "text": "Nicola C",
+              "style": "client"
+            },
+            {
               "text": "OPEN",
               "style": "open",
               "bold": true
-            },
-            {
-              "text": "Nicola C",
-              "style": "client"
             },
             {
               "text": "Lisa T",
@@ -1129,9 +1129,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jen McL",
+              "style": "client"
             },
             {
               "text": "Jan F",
@@ -1152,16 +1151,18 @@
               "bold": true
             },
             {
-              "text": "Jen McL",
-              "style": "client"
-            },
-            {
               "text": "Gail M",
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1495,9 +1496,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1728,13 +1728,13 @@
               "style": "client"
             },
             {
+              "text": "Nicola C",
+              "style": "client"
+            },
+            {
               "text": "OPEN",
               "style": "open",
               "bold": true
-            },
-            {
-              "text": "Nicola C",
-              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1799,8 +1799,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2010,16 +2011,15 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
-            },
-            {
               "text": "Moira C",
               "style": "client"
             },
             {
               "text": "Katie C",
+              "style": "client"
+            },
+            {
+              "text": "Julie",
               "style": "client"
             },
             {
@@ -2135,9 +2135,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2368,13 +2367,13 @@
               "style": "client"
             },
             {
+              "text": "Nicola C",
+              "style": "client"
+            },
+            {
               "text": "OPEN",
               "style": "open",
               "bold": true
-            },
-            {
-              "text": "Nicola C",
-              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2439,8 +2438,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2518,6 +2518,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-29T17:33:13Z",
-  "publishedAt": "2026-10-29T17:47:47.494949+00:00"
+  "sourceLastModified": "2026-10-29T21:20:58Z",
+  "publishedAt": "2026-10-29T21:21:25.594067+00:00"
 }
