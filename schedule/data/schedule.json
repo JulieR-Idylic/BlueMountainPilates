@@ -216,9 +216,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Melissa C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -619,8 +618,9 @@
               "style": "client"
             },
             {
-              "text": "Melissa C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -855,9 +855,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Melissa C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1262,8 +1261,9 @@
               "style": "client"
             },
             {
-              "text": "Melissa C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1485,9 +1485,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Melissa C",
+              "style": "client"
             },
             {
               "text": "Laura S",
@@ -2422,6 +2421,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-30T16:19:57Z",
-  "publishedAt": "2026-10-30T17:03:58.737893+00:00"
+  "sourceLastModified": "2026-10-30T18:15:36Z",
+  "publishedAt": "2026-10-30T21:39:09.859183+00:00"
 }
