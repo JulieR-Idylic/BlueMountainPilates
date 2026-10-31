@@ -1419,7 +1419,7 @@
               "style": "client"
             },
             {
-              "text": "Julie",
+              "text": "Kristin S",
               "style": "client"
             },
             {
@@ -1449,16 +1449,17 @@
               "style": "client"
             },
             {
-              "text": "Kristin S",
-              "style": "client"
-            },
-            {
               "text": "Becky G",
               "style": "client"
             },
             {
               "text": "Cecilia R",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2421,6 +2422,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-30T18:15:36Z",
-  "publishedAt": "2026-10-30T21:39:09.859183+00:00"
+  "sourceLastModified": "2026-10-31T17:17:38Z",
+  "publishedAt": "2026-10-31T20:15:12.332128+00:00"
 }
