@@ -895,9 +895,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1535,9 +1534,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2422,6 +2420,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-01T17:59:48Z",
-  "publishedAt": "2026-11-01T18:11:58.355165+00:00"
+  "sourceLastModified": "2026-11-01T19:04:39Z",
+  "publishedAt": "2026-11-01T19:05:12.153085+00:00"
 }
