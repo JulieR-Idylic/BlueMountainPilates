@@ -252,8 +252,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -554,9 +555,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -895,8 +895,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1198,9 +1199,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1535,8 +1535,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1838,9 +1839,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Betsy C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2422,6 +2422,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-10-31T17:17:38Z",
-  "publishedAt": "2026-10-31T20:15:12.332128+00:00"
+  "sourceLastModified": "2026-11-01T17:05:13Z",
+  "publishedAt": "2026-11-01T17:05:37.601054+00:00"
 }
