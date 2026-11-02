@@ -9,14 +9,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -98,8 +98,9 @@
               "style": "client"
             },
             {
-              "text": "Kathy R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Patti R",
@@ -179,8 +180,9 @@
               "style": "client"
             },
             {
-              "text": "Cecilia R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -220,9 +222,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cecilia R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -622,9 +623,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Kathy R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -653,14 +653,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -1292,14 +1292,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -1394,8 +1394,9 @@
               "style": "client"
             },
             {
-              "text": "Amy H",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -1451,8 +1452,9 @@
               "bold": true
             },
             {
-              "text": "Jan F",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Becky G",
@@ -1819,8 +1821,9 @@
               "bold": true
             },
             {
-              "text": "Jan F",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -1915,9 +1918,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Amy H",
+              "style": "client"
             }
           ]
         }
@@ -1931,14 +1933,14 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.44921875,
-        9.953125,
-        13.046875,
+        13.46484375,
+        9.9296875,
+        13.06640625,
         13.0,
         13.0,
         13.0,
-        11.703125,
-        11.02734375
+        11.73046875,
+        11.0
       ],
       "rowHeights": [
         22.5,
@@ -2033,8 +2035,9 @@
               "style": "client"
             },
             {
-              "text": "Amy H",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -2090,10 +2093,6 @@
               "bold": true
             },
             {
-              "text": "Jan F",
-              "style": "client"
-            },
-            {
               "text": "Kristin S",
               "style": "client"
             },
@@ -2104,6 +2103,11 @@
             {
               "text": "Cecilia R",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2429,6 +2433,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-02T13:35:26Z",
-  "publishedAt": "2026-11-02T14:13:42.153364+00:00"
+  "sourceLastModified": "2026-11-02T19:58:31Z",
+  "publishedAt": "2026-11-02T21:50:04.813653+00:00"
 }
