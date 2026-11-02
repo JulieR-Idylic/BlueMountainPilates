@@ -102,7 +102,7 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
+              "text": "Patti R",
               "style": "client"
             },
             {
@@ -145,12 +145,14 @@
               "style": "client"
             },
             {
-              "text": "Katie C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
-              "text": "Patti R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -380,8 +382,9 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -743,8 +746,9 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Lu A",
@@ -1018,8 +1022,9 @@
               "bold": true
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -1380,8 +1385,9 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Lu A",
@@ -1657,8 +1663,9 @@
               "bold": true
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -2017,8 +2024,9 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Lu A",
@@ -2421,6 +2429,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-02T01:16:16Z",
-  "publishedAt": "2026-11-02T01:27:47.684116+00:00"
+  "sourceLastModified": "2026-11-02T02:59:31Z",
+  "publishedAt": "2026-11-02T03:16:02.314524+00:00"
 }
