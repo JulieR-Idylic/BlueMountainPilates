@@ -106,8 +106,9 @@
               "style": "client"
             },
             {
-              "text": "Lu A",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Amy H",
@@ -418,9 +419,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Lu A",
+              "style": "client"
             },
             {
               "text": "",
@@ -2429,6 +2429,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-02T04:22:00Z",
-  "publishedAt": "2026-11-02T07:57:16.760523+00:00"
+  "sourceLastModified": "2026-11-02T13:35:26Z",
+  "publishedAt": "2026-11-02T14:13:42.153364+00:00"
 }
