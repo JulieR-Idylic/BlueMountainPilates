@@ -204,10 +204,6 @@
               "bold": true
             },
             {
-              "text": "Ricky R",
-              "style": "client"
-            },
-            {
               "text": "Kristin J",
               "style": "client"
             },
@@ -218,6 +214,11 @@
             {
               "text": "Melissa C",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2420,6 +2421,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-01T19:04:39Z",
-  "publishedAt": "2026-11-01T19:05:12.153085+00:00"
+  "sourceLastModified": "2026-11-02T01:16:16Z",
+  "publishedAt": "2026-11-02T01:27:47.684116+00:00"
 }
