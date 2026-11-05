@@ -497,8 +497,9 @@
               "style": "client"
             },
             {
-              "text": "Nicola C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2434,6 +2435,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-04T18:44:19Z",
-  "publishedAt": "2026-11-04T19:55:21.348515+00:00"
+  "sourceLastModified": "2026-11-04T22:51:09Z",
+  "publishedAt": "2026-11-05T00:51:33.060935+00:00"
 }
