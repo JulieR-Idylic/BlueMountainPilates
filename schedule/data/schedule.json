@@ -124,8 +124,9 @@
           "tone": "green",
           "cells": [
             {
-              "text": "",
-              "style": "day"
+              "text": "JUMPBOARD",
+              "style": "day",
+              "bold": true
             },
             {
               "text": "9:30am",
@@ -141,16 +142,19 @@
               "style": "client"
             },
             {
-              "text": "Katie C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
-              "text": "Julie",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
-              "text": "Julie",
-              "style": "client"
+              "text": "JUMPBOARD",
+              "style": "client",
+              "bold": true
             }
           ]
         },
@@ -2423,6 +2427,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-08T20:47:38Z",
-  "publishedAt": "2026-11-08T21:58:41.136416+00:00"
+  "sourceLastModified": "2026-11-09T00:30:53Z",
+  "publishedAt": "2026-11-09T01:28:03.510341+00:00"
 }
