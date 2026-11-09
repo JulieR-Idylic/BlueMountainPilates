@@ -623,9 +623,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cricket C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -808,17 +807,17 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cricket C",
+              "style": "client"
             },
             {
               "text": "Becky G",
               "style": "client"
             },
             {
-              "text": "Cecilia R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -858,9 +857,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cecilia R",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1208,9 +1206,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cricket C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2160,9 +2157,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cricket C",
+              "style": "client"
             },
             {
               "text": "Jenn McD",
@@ -2413,9 +2409,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Cricket C",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2427,6 +2422,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-09T00:30:53Z",
-  "publishedAt": "2026-11-09T01:28:03.510341+00:00"
+  "sourceLastModified": "2026-11-09T22:05:23Z",
+  "publishedAt": "2026-11-09T22:33:33.859462+00:00"
 }
