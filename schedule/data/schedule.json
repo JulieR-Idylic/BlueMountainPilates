@@ -215,12 +215,13 @@
               "style": "client"
             },
             {
-              "text": "Laura S",
+              "text": "Melissa C",
               "style": "client"
             },
             {
-              "text": "Melissa C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2423,6 +2424,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-10T04:39:16Z",
-  "publishedAt": "2026-11-10T04:21:28.079961+00:00"
+  "sourceLastModified": "2026-11-10T17:34:55Z",
+  "publishedAt": "2026-11-10T19:52:58.232450+00:00"
 }
