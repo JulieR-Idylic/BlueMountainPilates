@@ -9,13 +9,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.3984375,
+        13.42578125,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.73046875,
+        11.7109375,
         11.0
       ],
       "rowHeights": [
@@ -650,13 +650,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.3984375,
+        13.42578125,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.73046875,
+        11.7109375,
         11.0
       ],
       "rowHeights": [
@@ -966,8 +966,9 @@
               "style": "client"
             },
             {
-              "text": "Jeannie M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1288,13 +1289,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.3984375,
+        13.42578125,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.73046875,
+        11.7109375,
         11.0
       ],
       "rowHeights": [
@@ -1793,13 +1794,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.3984375,
+        13.42578125,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.73046875,
+        11.7109375,
         11.0
       ],
       "rowHeights": [
@@ -2424,6 +2425,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-11T00:04:22Z",
-  "publishedAt": "2026-11-11T00:35:41.319793+00:00"
+  "sourceLastModified": "2026-11-11T01:12:05Z",
+  "publishedAt": "2026-11-11T07:01:33.846460+00:00"
 }
