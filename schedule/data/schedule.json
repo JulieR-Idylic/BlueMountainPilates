@@ -9,13 +9,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.42578125,
+        13.3984375,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.7109375,
+        11.73046875,
         11.0
       ],
       "rowHeights": [
@@ -532,9 +532,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Julie",
+              "style": "client"
             },
             {
               "text": "Jan F",
@@ -555,8 +554,9 @@
               "bold": true
             },
             {
-              "text": "Jen McL",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Betsy C",
@@ -593,7 +593,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Patti R, Becky M",
+              "text": "MAT: Jaime I, Becky M",
               "style": "mat",
               "colspan": 5
             },
@@ -634,9 +634,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "JenMcL",
+              "style": "client"
             }
           ]
         }
@@ -650,13 +649,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.42578125,
+        13.3984375,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.7109375,
+        11.73046875,
         11.0
       ],
       "rowHeights": [
@@ -1289,13 +1288,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.42578125,
+        13.3984375,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.7109375,
+        11.73046875,
         11.0
       ],
       "rowHeights": [
@@ -1794,13 +1793,13 @@
       "rowCount": 16,
       "columnCount": 8,
       "columnWidths": [
-        13.42578125,
+        13.3984375,
         10.0,
         13.0,
         13.0,
         13.0,
         13.0,
-        11.7109375,
+        11.73046875,
         11.0
       ],
       "rowHeights": [
@@ -2425,6 +2424,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-12T01:06:26Z",
-  "publishedAt": "2026-11-12T01:44:46.411972+00:00"
+  "sourceLastModified": "2026-11-12T18:53:46Z",
+  "publishedAt": "2026-11-12T20:10:53.080075+00:00"
 }
