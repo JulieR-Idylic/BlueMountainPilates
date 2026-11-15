@@ -111,9 +111,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Patti R",
+              "style": "client"
             },
             {
               "text": "Julie",
@@ -135,16 +134,17 @@
               "bold": true
             },
             {
-              "text": "Patti R",
-              "style": "client"
-            },
-            {
               "text": "Katie C",
               "style": "client"
             },
             {
               "text": "Kristin S",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -302,9 +302,8 @@
               "bold": true
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gretchen R",
+              "style": "client"
             },
             {
               "text": "",
@@ -1633,8 +1632,9 @@
               "style": "client"
             },
             {
-              "text": "Maureen M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1738,7 +1738,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Patti R",
+              "text": "MAT: Jaime I, Patti R, Maureen M",
               "style": "mat",
               "colspan": 5
             },
@@ -2363,7 +2363,7 @@
           "tone": "green",
           "cells": [
             {
-              "text": "Fri  Dec 9",
+              "text": "Fri  Dec 11",
               "style": "day",
               "bold": true
             },
@@ -2373,7 +2373,7 @@
               "bold": true
             },
             {
-              "text": "MAT: Jaime I, Patti R",
+              "text": "MAT: Jaime I, Patti R, Maureen M",
               "style": "mat",
               "colspan": 5
             },
@@ -2424,6 +2424,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-15T18:50:37Z",
-  "publishedAt": "2026-11-15T18:59:14.429620+00:00"
+  "sourceLastModified": "2026-11-15T21:27:01Z",
+  "publishedAt": "2026-11-15T21:28:29.942592+00:00"
 }
