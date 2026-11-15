@@ -744,13 +744,13 @@
               "style": "client"
             },
             {
+              "text": "Lu A",
+              "style": "client"
+            },
+            {
               "text": "OPEN",
               "style": "open",
               "bold": true
-            },
-            {
-              "text": "Lu A",
-              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2424,6 +2424,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-14T17:12:17Z",
-  "publishedAt": "2026-11-14T18:20:28.155463+00:00"
+  "sourceLastModified": "2026-11-15T03:03:54Z",
+  "publishedAt": "2026-11-15T09:16:23.263106+00:00"
 }
