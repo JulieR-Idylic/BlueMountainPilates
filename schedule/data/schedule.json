@@ -777,10 +777,6 @@
               "bold": true
             },
             {
-              "text": "Lisa T",
-              "style": "client"
-            },
-            {
               "text": "Moira C",
               "style": "client"
             },
@@ -789,11 +785,15 @@
               "style": "client"
             },
             {
+              "text": "Patti R",
+              "style": "client"
+            },
+            {
               "text": "Julie",
               "style": "client"
             },
             {
-              "text": "Patti R",
+              "text": "Julie",
               "style": "client"
             }
           ]
@@ -2424,6 +2424,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-15T21:27:01Z",
-  "publishedAt": "2026-11-15T21:28:29.942592+00:00"
+  "sourceLastModified": "2026-11-15T22:46:39Z",
+  "publishedAt": "2026-11-15T23:23:31.300448+00:00"
 }
