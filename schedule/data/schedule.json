@@ -744,8 +744,9 @@
               "style": "client"
             },
             {
-              "text": "Lu A",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -811,12 +812,13 @@
               "bold": true
             },
             {
-              "text": "Becky G",
+              "text": "Cecilia R",
               "style": "client"
             },
             {
-              "text": "Cecilia R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -937,9 +939,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gail M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2425,6 +2426,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-16T20:05:52Z",
-  "publishedAt": "2026-11-16T22:22:53.851088+00:00"
+  "sourceLastModified": "2026-11-17T03:28:25Z",
+  "publishedAt": "2026-11-17T04:46:22.306860+00:00"
 }
