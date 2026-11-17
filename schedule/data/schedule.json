@@ -620,10 +620,6 @@
               "bold": true
             },
             {
-              "text": "Deborah C",
-              "style": "client"
-            },
-            {
               "text": "Kristin S",
               "style": "client"
             },
@@ -634,6 +630,11 @@
             {
               "text": "Maureen M",
               "style": "client"
+            },
+            {
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Amy H",
@@ -2426,6 +2427,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-17T03:28:25Z",
-  "publishedAt": "2026-11-17T04:46:22.306860+00:00"
+  "sourceLastModified": "2026-11-17T20:05:33Z",
+  "publishedAt": "2026-11-17T21:07:45.777506+00:00"
 }
