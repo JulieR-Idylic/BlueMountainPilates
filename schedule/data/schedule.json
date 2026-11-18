@@ -637,8 +637,9 @@
               "bold": true
             },
             {
-              "text": "Amy H",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         }
@@ -2427,6 +2428,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-18T01:08:41Z",
-  "publishedAt": "2026-11-17T21:07:45.777506+00:00"
+  "sourceLastModified": "2026-11-18T16:00:01Z",
+  "publishedAt": "2026-11-18T20:45:10.326676+00:00"
 }
