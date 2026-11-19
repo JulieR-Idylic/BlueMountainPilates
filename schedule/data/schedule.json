@@ -818,9 +818,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Maureen M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -861,8 +860,9 @@
               "style": "client"
             },
             {
-              "text": "Maureen M",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1672,8 +1672,9 @@
               "style": "client"
             },
             {
-              "text": "Vikki W",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2427,6 +2428,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-19T18:46:42Z",
-  "publishedAt": "2026-11-19T18:47:25.205322+00:00"
+  "sourceLastModified": "2026-11-19T20:02:57Z",
+  "publishedAt": "2026-11-19T20:50:35.045840+00:00"
 }
