@@ -822,9 +822,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Hailee J",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -860,9 +859,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Jen McL",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -929,8 +927,9 @@
               "bold": true
             },
             {
-              "text": "Jen McL",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Jacque M",
@@ -2428,6 +2427,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-19T20:02:57Z",
-  "publishedAt": "2026-11-19T20:50:35.045840+00:00"
+  "sourceLastModified": "2026-11-19T21:38:44Z",
+  "publishedAt": "2026-11-20T02:14:13.872458+00:00"
 }
