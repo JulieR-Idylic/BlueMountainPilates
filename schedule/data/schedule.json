@@ -885,8 +885,9 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -1523,8 +1524,9 @@
               "bold": true
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -1883,7 +1885,7 @@
               "style": "client"
             },
             {
-              "text": "Jenn McD",
+              "text": "Patti R",
               "style": "client"
             },
             {
@@ -1930,8 +1932,9 @@
               "style": "client"
             },
             {
-              "text": "Patti R",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             }
           ]
         },
@@ -2157,8 +2160,9 @@
               "bold": true
             },
             {
-              "text": "Jenn McD",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "Julie",
@@ -2417,6 +2421,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-23T20:16:17Z",
-  "publishedAt": "2026-11-24T00:07:22.817776+00:00"
+  "sourceLastModified": "2026-11-24T03:02:20Z",
+  "publishedAt": "2026-11-24T03:03:03.833824+00:00"
 }
