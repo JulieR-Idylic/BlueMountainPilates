@@ -754,8 +754,9 @@
               "style": "client"
             },
             {
-              "text": "Betsy C",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -795,9 +796,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gail M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1065,12 +1065,13 @@
               "style": "client"
             },
             {
-              "text": "Gail M",
+              "text": "Robin G",
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -1433,9 +1434,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gail M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -1701,12 +1701,13 @@
               "style": "client"
             },
             {
-              "text": "Gail M",
+              "text": "Robin G",
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2075,9 +2076,8 @@
               "style": "client"
             },
             {
-              "text": "OPEN",
-              "style": "open",
-              "bold": true
+              "text": "Gail M",
+              "style": "client"
             },
             {
               "text": "OPEN",
@@ -2337,12 +2337,13 @@
               "style": "client"
             },
             {
-              "text": "Gail M",
+              "text": "Robin G",
               "style": "client"
             },
             {
-              "text": "Robin G",
-              "style": "client"
+              "text": "OPEN",
+              "style": "open",
+              "bold": true
             },
             {
               "text": "OPEN",
@@ -2421,6 +2422,6 @@
       ]
     }
   ],
-  "sourceLastModified": "2026-11-24T14:42:23Z",
-  "publishedAt": "2026-11-24T03:03:03.833824+00:00"
+  "sourceLastModified": "2026-11-24T20:13:24Z",
+  "publishedAt": "2026-11-24T20:13:47.442771+00:00"
 }
